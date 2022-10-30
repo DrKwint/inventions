@@ -1,0 +1,569 @@
+﻿division_of_labor_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_manufacturing_throughput_mult = 0.02
+}
+
+division_of_labor_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+division_of_labor_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+division_of_labor_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+tulls_seed_drill_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_rye_farm_throughput_mult = 0.02
+building_wheat_farm_throughput_mult = 0.02
+building_rice_farm_throughput_mult = 0.02
+building_maize_farm_throughput_mult = 0.02
+building_millet_farm_throughput_mult = 0.02
+}
+
+tulls_seed_drill_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+tulls_seed_drill_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+tulls_seed_drill_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+advanced_ore_roasting_processes_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_coal_mine_throughput_mult = 0.02
+building_iron_mine_throughput_mult = 0.02
+building_lead_mine_throughput_mult = 0.02
+building_sulfur_mine_throughput_mult = 0.02
+building_gold_mine_throughput_mult = 0.02
+}
+
+advanced_ore_roasting_processes_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+advanced_ore_roasting_processes_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+advanced_ore_roasting_processes_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+improved_bale_press_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_rye_farm_throughput_mult = 0.02
+building_wheat_farm_throughput_mult = 0.02
+building_millet_farm_throughput_mult = 0.02
+building_cotton_plantation_throughput_mult = 0.02
+building_tea_plantation_throughput_mult = 0.02
+building_tobacco_plantation_throughput_mult = 0.02
+building_sugar_plantation_throughput_mult = 0.02
+}
+
+improved_bale_press_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+improved_bale_press_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+improved_bale_press_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+integral_distillery_process_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_output_liquor_mult = 0.04
+}
+
+integral_distillery_process_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+integral_distillery_process_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+integral_distillery_process_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+automatic_boiler_valves_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	# TODO
+}
+
+automatic_boiler_valves_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+automatic_boiler_valves_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+automatic_boiler_valves_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+physiocratic_economics_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_agriculture_throughput_mult = 0.03
+building_group_bg_ranching_throughput_mult = 0.03
+building_group_bg_plantations_throughput_mult = 0.03
+}
+
+physiocratic_economics_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+physiocratic_economics_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+physiocratic_economics_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+societal_status_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_conscription_rate_add = 0.05
+country_army_power_projection_mult = 0.05
+}
+
+societal_status_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+societal_status_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+societal_status_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+alphabetic_flag_signaling_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	building_fishing_wharf_throughput_mult = 0.01
+building_whaling_station_throughput_mult = 0.01
+building_port_throughput_mult = 0.02
+# TODO: add some navy/convoys bonus
+}
+
+alphabetic_flag_signaling_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+alphabetic_flag_signaling_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+alphabetic_flag_signaling_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+naval_design_bureaus_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	# TODO
+}
+
+naval_design_bureaus_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+naval_design_bureaus_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+naval_design_bureaus_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+surgical_anesthesia_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	# TODO
+}
+
+surgical_anesthesia_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+surgical_anesthesia_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+surgical_anesthesia_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+permanent_fire_watch_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_group_bg_manufacturing_mortality_mult = -0.002
+building_group_bg_government_mortality_mult = -0.002
+building_group_bg_service_mortality_mult = -0.002
+building_group_bg_infrastructure_mortality_mult = -0.002
+
+
+}
+
+permanent_fire_watch_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+permanent_fire_watch_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+permanent_fire_watch_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+idealogical_thought_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pop_attraction_mult = 0.02
+
+}
+
+idealogical_thought_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+idealogical_thought_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+idealogical_thought_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+zoning_ordinances_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_urban_center_throughput_mult = 0.02
+}
+
+zoning_ordinances_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+zoning_ordinances_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+zoning_ordinances_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+patents_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_weekly_innovation_max_add = 10
+}
+
+patents_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+patents_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+patents_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+land_grant_universities_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_tech_spread_mult = 0.05
+country_weekly_innovation_max_add = 3
+}
+
+land_grant_universities_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+land_grant_universities_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+land_grant_universities_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+constitutionalism_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+constitutionalism_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+constitutionalism_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+constitutionalism_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+joint_stock_company_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_trade_route_competitiveness_mult = 0.05
+
+}
+
+joint_stock_company_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+joint_stock_company_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+joint_stock_company_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+anatomy_and_physiology_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_mortality_wealth_mult = -0.0003
+# 5 wealth = -.15%
+# 10 wealth = -.3%
+# 20 wealth = -.6%
+# 40 wealth = -1.2%
+
+}
+
+anatomy_and_physiology_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+anatomy_and_physiology_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+anatomy_and_physiology_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+silver_standard_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+silver_standard_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+silver_standard_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+silver_standard_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+eugenics_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+# reduces birth rate
+}
+
+eugenics_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+eugenics_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+eugenics_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+existentialism_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+existentialism_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+existentialism_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+existentialism_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+mass_advertising_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+mass_advertising_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+mass_advertising_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+mass_advertising_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+womens_sufferage_movement_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+womens_sufferage_movement_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+womens_sufferage_movement_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+womens_sufferage_movement_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+regulated_stock_trade_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_capitalists_investment_pool_contribution_add = 0.005
+
+}
+
+regulated_stock_trade_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+regulated_stock_trade_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+regulated_stock_trade_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+standardized_double_entry_bookkeeping_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_aristocrats_investment_pool_contribution_add = 0.005
+state_capitalists_investment_pool_contribution_add = 0.005
+}
+
+standardized_double_entry_bookkeeping_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+standardized_double_entry_bookkeeping_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+standardized_double_entry_bookkeeping_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+bankers_clearing_house_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# not the *biggest* fan of this
+country_loan_interest_rate_mult = -0.05
+}
+
+bankers_clearing_house_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+bankers_clearing_house_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+bankers_clearing_house_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}
+phenomenology_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	# TODO
+}
+
+phenomenology_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+phenomenology_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+phenomenology_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}

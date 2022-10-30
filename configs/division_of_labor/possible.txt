@@ -1,0 +1,6 @@
+any_scope_state = {
+	OR = {
+		has_industry_building = yes
+		has_heavy_industry_building = yes
+	}
+}

@@ -1,0 +1,24 @@
+add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_university
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_government_administration
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}

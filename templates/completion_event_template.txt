@@ -1,0 +1,71 @@
+${key} = {
+    type = country_event
+    placement = root
+    title = ${key}.t
+    desc = ${key}.d
+    flavor = ${key}.f
+
+    icon = "gfx/interface/icons/event_icons/event_${event_icon}.dds"
+	event_image = {
+		video = "gfx/event_pictures/${event_picture}.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = ${script_name}_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:${script_name}_discoveries < 20
+        }
+		add_modifier = {
+            name = ${script_name}_modifier
+		}
+        if = {
+            limit = {
+                global_var:${script_name}_discoveries < 1
+            }
+            add_modifier = {
+                name = ${script_name}_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.${notification_event_idx}
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:${script_name}_discoveries < 1 }
+                    global_var:${script_name}_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = ${script_name}_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:${script_name}_discoveries < 5 }
+            }
+            add_modifier = {
+                name = ${script_name}_prestige
+            }
+        }
+        change_global_variable = {
+            name = ${script_name}_discoveries
+            add = 1
+		}
+    }
+}
+

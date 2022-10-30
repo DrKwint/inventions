@@ -1,0 +1,1 @@
+building_group_bg_manufacturing_throughput_mult = 0.02

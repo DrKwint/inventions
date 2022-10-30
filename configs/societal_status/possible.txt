@@ -1,0 +1,3 @@
+any_scope_state = {
+	has_military_building = yes
+}

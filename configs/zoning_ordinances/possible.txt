@@ -1,0 +1,6 @@
+any_scope_state = {
+	any_scope_building = {
+		is_building_type = building_urban_center
+		level >= 5
+	}
+}

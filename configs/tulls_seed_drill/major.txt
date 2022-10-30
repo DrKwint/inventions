@@ -1,0 +1,18 @@
+add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}

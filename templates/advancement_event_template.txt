@@ -1,0 +1,25 @@
+${key} = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = ${script_name}_progress
+            add = { 
+                value = { 
+                    ${add}
+                }
+                ${modifier}
+                multiply = {
+                    value = global_var:${script_name}_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+

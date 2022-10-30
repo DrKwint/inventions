@@ -1,0 +1,26 @@
+add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_naval_base
+				is_building_type = building_fishing_wharf
+				is_building_type = building_whaling_station
+				is_building_type = building_port
+			}
+		}
+		add = this.level
+	}
+	every_scope_state = {
+		every_scope_building = {
+			limit = {
+				is_building_type = building_naval_base
+				is_building_type = building_port
+			}
+			add = {
+				value = this.level
+				multiply = this.level
+			}
+		}
+	}
+}

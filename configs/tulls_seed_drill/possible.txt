@@ -1,0 +1,12 @@
+any_scope_state = {
+	any_scope_building = {
+		OR = {
+			is_building_type = building_rye_farm
+			is_building_type = building_wheat_farm
+			is_building_type = building_rice_farm
+			is_building_type = building_maize_farm
+			is_building_type = building_millet_farm
+		}
+		level >= 2
+	}
+}

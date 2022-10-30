@@ -1,0 +1,9 @@
+any_scope_state = {
+	any_scope_building = {
+		is_building_type = building_food_industry
+		NOT = {
+			has_active_production_method = pm_disabled_distillery
+		}
+		level >= 3
+	}
+}

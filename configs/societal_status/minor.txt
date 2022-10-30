@@ -1,0 +1,12 @@
+add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_barracks
+				is_building_type = building_naval_base
+			}
+		}
+		add = this.level
+	}
+}

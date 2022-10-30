@@ -1,0 +1,6 @@
+IF = {
+	limit = {
+		treasury < 0
+	}
+	multiply = 10
+}

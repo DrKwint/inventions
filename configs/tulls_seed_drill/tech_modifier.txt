@@ -1,0 +1,5 @@
+building_rye_farm_throughput_mult = 0.02
+building_wheat_farm_throughput_mult = 0.02
+building_rice_farm_throughput_mult = 0.02
+building_maize_farm_throughput_mult = 0.02
+building_millet_farm_throughput_mult = 0.02

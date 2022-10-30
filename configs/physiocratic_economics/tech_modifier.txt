@@ -1,0 +1,3 @@
+building_group_bg_agriculture_throughput_mult = 0.03
+building_group_bg_ranching_throughput_mult = 0.03
+building_group_bg_plantations_throughput_mult = 0.03

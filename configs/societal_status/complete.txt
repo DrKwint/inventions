@@ -1,0 +1,9 @@
+any_scope_state = {
+	any_scope_building = {
+		OR = {
+            is_building_type = building_barracks
+            is_building_type = building_naval_base
+		}
+		level >= 2
+	}
+}

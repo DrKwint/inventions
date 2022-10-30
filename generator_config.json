@@ -1,0 +1,506 @@
+[
+    {
+        "${script_name}": "division_of_labor",
+        "${display_proper_name}": "Division of Labor",
+        "${type}": "industry",
+        "${tech}": "manufacturies",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Invent a better way to do manufacturing",
+        "${journal_reason}": "Industry has come to our shores, creating greater machines than ever before. Unfortunately, old methods of manufacture are proving slow and inefficient for these complex wares.",
+        "${completion_description}": "A solution to our problems in manufacturing has been found!",
+        "${completion_flavor}": "Instead of expecting a worker to create an entire product by themselves, we can specialize them to a specific task they will perform on every product."
+    },
+    {
+        "${script_name}": "tulls_seed_drill",
+        "${display_proper_name}": "Tull's Seed Drill",
+        "${type}": "industry",
+        "${tech}": "enclosure",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Build a machine to speed up planting.",
+        "${journal_reason}": "Planting crops is a slow, laborious, manual process. Thousands of laborers spend weeks on end, doing this every year. Can we speed it up?",
+        "${completion_description}": "We found a way to plant crops faster!",
+        "${completion_flavor}": "Instead of having to break our backs pushing seeds into the ground by hand, we have a machine that does it for us! Oh my back! I'm going to go sit down now."
+    },
+    {
+        "${script_name}": "advanced_ore_roasting_processes",
+        "${display_proper_name}": "Advanced Ore Roasting Processes",
+        "${type}": "industry",
+        "${tech}": "shaft_mining",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 2,
+        "${journal_goal}": "Invent a better way to separate valuable metals from useless rock.",
+        "${journal_reason}": "We are digging more ore out of deep shaft mines than ever before! But it is becoming evident that valuable minerals are not all collected in the furnace.",
+        "${completion_description}": "We have found a way to separate mineral from rock more efficiently!",
+        "${completion_flavor}": "Engineers have devised a method of roasting ore that retrieves more metal from the same amount of ore."
+    },
+    {
+        "${script_name}": "improved_bale_press",
+        "${display_proper_name}": "Improved Bale Press",
+        "${type}": "industry",
+        "${tech}": "cotton_gin",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Invent a less labor intensive method of baling the harvest.",
+        "${journal_reason}": "We are harvesting crops and cleaning cotton at a prodigious rate. All the effort that was going into preparing the crop is now spent packing it into bales.",
+        "${completion_description}": "We have created a machine that makes pressing the crop into bales much easier!",
+        "${completion_flavor}": "Farmers have created an improved machine for baling cotton and other crops for transport to market."
+    },
+    {
+        "${script_name}": "integral_distillery_process",
+        "${display_proper_name}": "Integral Distillery Process",
+        "${type}": "industry",
+        "${tech}": "distillation",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "automatic_boiler_valves",
+        "${display_proper_name}": "Automatic Boiler Valves",
+        "${type}": "industry",
+        "${tech}": "atmospheric_engine",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 3,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "physiocratic_economics",
+        "${display_proper_name}": "Physiocratic Economics",
+        "${type}": "industry",
+        "${tech}": "intensive_agriculture",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 4,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "societal_status",
+        "${display_proper_name}": "Societal Status",
+        "${type}": "military",
+        "${tech}": "standing_army",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Find some way to reward our soldiers for their service.",
+        "${journal_reason}": "Find some way to reward our soldiers for their service.",
+        "${completion_description}": "We now credit our soldiers with the esteem the're due.",
+        "${completion_flavor}": "'The officers of the -shire were in general a very creditable, gentlemanlike set, and the best of them were of the present party; but Mr. Wickham was as far beyond them all in person, countenance, air, and walk.' - Jane Austen, in Pride and Prejudice"
+    },
+    {
+        "${script_name}": "alphabetic_flag_signaling",
+        "${display_proper_name}": "Alphabetic Flag Signaling",
+        "${type}": "military",
+        "${tech}": "navigation",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "'You are the most beautiful ship in the world.' - USS Independence, to the Amerigo Vespucci"
+    },
+    {
+        "${script_name}": "naval_design_bureaus",
+        "${display_proper_name}": "Naval Design Bureaus",
+        "${type}": "military",
+        "${tech}": "drydocks",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "surgical_anesthesia",
+        "${display_proper_name}": "Surgical Anesthesia",
+        "${type}": "military",
+        "${tech}": "artillery",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "permanent_fire_watch",
+        "${display_proper_name}": "Permanent Fire Watch",
+        "${type}": "society",
+        "${tech}": "urbanization",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "'The fire was barely fifteen minutes old. What followed was a series of fatal errors that set the fire free and doomed the city to a fiery death.' ― Jim Murphy, The Great Fire"
+    },
+    {
+        "${script_name}": "idealogical_thought",
+        "${display_proper_name}": "Ideological Thought",
+        "${type}": "society",
+        "${tech}": "rationalism",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "'Slowly, ideas lead to ideology, lead to policies that lead to actions.' – Nandan Nilekani"
+    },
+    {
+        "${script_name}": "zoning_ordinances",
+        "${display_proper_name}": "Zoning Ordinances",
+        "${type}": "society",
+        "${tech}": "urban_planning",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 2,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "patents",
+        "${display_proper_name}": "Patents",
+        "${type}": "society",
+        "${tech}": "bureaucracy",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 2,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "land_grant_universities",
+        "${display_proper_name}": "Land Grant Universities",
+        "${type}": "society",
+        "${tech}": "academia",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 2,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "constitutionalism",
+        "${display_proper_name}": "Constitutionalism",
+        "${type}": "society",
+        "${tech}": "democracy",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 2,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "joint_stock_company",
+        "${display_proper_name}": "Joint Stock Company",
+        "${type}": "society",
+        "${tech}": "international_trade",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 3,
+        "${journal_goal}": "Afford legal rights and protections to bigger commercial ventures than ever before.",
+        "${journal_reason}": "We are finding that ",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "anatomy_and_physiology",
+        "${display_proper_name}": "Anatomy and Physiology",
+        "${type}": "society",
+        "${tech}": "medical_degrees",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 3,
+        "${journal_goal}": "Formalize the study of the human body.",
+        "${journal_reason}": "From midnight capers to watching from the rafters of the operating theatre, we have collected a multiude of observations of the human body's design and function. Yet, disagreements linger.",
+        "${completion_description}": "A decisive text on the composition and inner workings of the body has been published!",
+        "${completion_flavor}": "'Anatomy: Descriptive and Surgical, Anatomy of the Human Body', more commonly known as 'Grey's Anatomy' was first published in 1858."
+    },
+    {
+        "${script_name}": "silver_standard",
+        "${display_proper_name}": "Silver Standard",
+        "${type}": "society",
+        "${tech}": "currency_standards",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 4,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "eugenics",
+        "${display_proper_name}": "Eugenics",
+        "${type}": "society",
+        "${tech}": "colonization",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "existentialism",
+        "${display_proper_name}": "Existentialism",
+        "${type}": "society",
+        "${tech}": "analytical_philosophy",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "mass_advertising",
+        "${display_proper_name}": "Mass Advertising",
+        "${type}": "society",
+        "${tech}": "behaviorism",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "womens_sufferage_movement",
+        "${display_proper_name}": "Womens Sufferage Movement",
+        "${type}": "society",
+        "${tech}": "feminism",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "regulated_stock_trade",
+        "${display_proper_name}": "Regulated Stock Trade",
+        "${type}": "society",
+        "${tech}": "stock_exchange",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Regulate the trade in equities of large companies",
+        "${journal_reason}": "The stock trade has been compared to the wild American west in its free-dealing ways. Calming the situation with legal regulations would encourage more investment.",
+        "${completion_description}": "We have devised regulations for the stock market!",
+        "${completion_flavor}": "The wild swings of the stock market have been calmed by some ingenious regulations. Now investors can be reassured that they won't lose everything quite so fast."
+    },
+    {
+        "${script_name}": "standardized_double_entry_bookkeeping",
+        "${display_proper_name}": "Standardized Double-Entry Bookkeeping",
+        "${type}": "society",
+        "${tech}": "banking",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Make the books of large, complex businesses more readable",
+        "${journal_reason}": "In order to comprehend and audit the books of the new commercial behemoths, we need to institute some standards around their accounting",
+        "${completion_description}": "We have standardized commercial accounting!",
+        "${completion_flavor}": "A collection of typical methods in double-entry bookkeeping have coalesced into a standard that's being taught to clerks and bureaucrats nationwide."
+    },
+    {
+        "${script_name}": "bankers_clearing_house",
+        "${display_proper_name}": "Bankers' Clearing House",
+        "${type}": "society",
+        "${tech}": "central_banking",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "TODO",
+        "${journal_reason}": "TODO",
+        "${completion_description}": "TODO",
+        "${completion_flavor}": "TODO"
+    },
+    {
+        "${script_name}": "phenomenology",
+        "${display_proper_name}": "Phenomenology",
+        "${type}": "society",
+        "${tech}": "psychoanalysis",
+        "${goal_points}": 1000,
+        "${event_probs}": [
+            869,
+            100,
+            30,
+            1
+        ],
+        "${tech_depth}": 1,
+        "${journal_goal}": "Understand how humans percieve the world.",
+        "${journal_reason}": "As we have developed our understanding of the psyche, the question of the connection between perception and reason remains.",
+        "${completion_description}": "Phenomena are distinct from the nature of being!",
+        "${completion_flavor}": "By concentrating on the study of consciousness and the objects of direct experience, we have delved deeper into the nature of the psyche, perception, and reason."
+    }
+]

@@ -1,0 +1,5 @@
+state_mortality_wealth_mult = -0.0003
+# 5 wealth = -.15%
+# 10 wealth = -.3%
+# 20 wealth = -.6%
+# 40 wealth = -1.2%

@@ -1,0 +1,8 @@
+${key} = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = ${script_name}_first_occurred
+    }
+}

@@ -1,0 +1,7 @@
+building_rye_farm_throughput_mult = 0.02
+building_wheat_farm_throughput_mult = 0.02
+building_millet_farm_throughput_mult = 0.02
+building_cotton_plantation_throughput_mult = 0.02
+building_tea_plantation_throughput_mult = 0.02
+building_tobacco_plantation_throughput_mult = 0.02
+building_sugar_plantation_throughput_mult = 0.02

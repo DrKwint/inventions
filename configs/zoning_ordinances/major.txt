@@ -1,0 +1,15 @@
+add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+			multiply = 2
+		}
+	}
+}

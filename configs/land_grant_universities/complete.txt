@@ -1,0 +1,7 @@
+any_scope_state = {
+	percent >= 0.75
+	AND = {
+		has_building = building_government_administration
+		has_building = building_university
+	}
+}

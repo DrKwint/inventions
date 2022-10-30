@@ -1,0 +1,17 @@
+add = 10
+every_scope_state = {
+	limit = {
+		NOT = {
+			is_production_method_active = {
+				building_type = building_food_industry
+				production_method = pm_disabled_distillery
+			}
+		}
+	}
+	every_scope_building = {
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}

@@ -1,0 +1,2 @@
+country_tech_spread_mult = 0.05
+country_weekly_innovation_max_add = 3

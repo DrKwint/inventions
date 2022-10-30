@@ -1,0 +1,27 @@
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 1
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 3
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 5
+        }
+    }
+    multiply = 2
+}

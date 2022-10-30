@@ -1,0 +1,7 @@
+${script_name}_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+

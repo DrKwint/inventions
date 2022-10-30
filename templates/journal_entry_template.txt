@@ -1,0 +1,59 @@
+${script_name}_je = {
+    icon = "gfx/interface/icons/event_icons/${event_icon_name}.dds"
+
+    is_shown_when_inactive = {
+		has_technology_researched = ${tech}
+		${show}
+	}
+
+    possible = {
+        ${possible}
+    }
+
+    immediate = {
+        if = {
+			limit = {
+				NOT = { has_global_variable = ${script_name}_discoveries }
+			}
+			set_global_variable = {
+				name = ${script_name}_discoveries
+				value = 0
+			}
+		}
+		set_variable = {
+			name = ${script_name}_progress
+			value = 0
+		}
+	}
+
+	current_value = {
+		value = var:${script_name}_progress
+	}
+
+    goal_add_value = {
+        add = ${goal_points}
+    }
+
+    can_deactivate = yes
+	on_weekly_pulse = {
+        random_events = {
+		    ${weekly_event_str}
+		}
+	}
+
+    progressbar = yes
+
+    complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+        ${complete}
+    }
+
+    on_complete = {
+        trigger_event = { id = invention_events.${completion_event_idx} }
+    }
+
+    weight = ${tech_depth}
+}
+

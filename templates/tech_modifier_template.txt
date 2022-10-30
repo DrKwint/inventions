@@ -1,0 +1,19 @@
+${script_name}_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_${icon}.dds
+	${tech_modifier}
+}
+
+${script_name}_first_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 2
+}
+
+${script_name}_early_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+${script_name}_prestige = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 0.2
+}

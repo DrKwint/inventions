@@ -1,0 +1,17 @@
+multiply = {
+	value = 1
+	if = {
+		limit = {
+			has_technology_researched = romanticism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_technology_researched = realism
+		}
+		add = 1
+	}
+}
+
+ceiling = yes

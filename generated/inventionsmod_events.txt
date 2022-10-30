@@ -1,0 +1,5746 @@
+﻿namespace = invention_events
+
+invention_events.1 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = division_of_labor_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:division_of_labor_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.2 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = division_of_labor_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_food_industry
+				is_building_type = building_textile_mills
+				is_building_type = building_furniture_manufacturies
+				is_building_type = building_glassworks
+				is_building_type = building_tooling_workshops
+				is_building_type = building_paper_mills
+				is_building_type = building_chemical_plants
+				is_building_type = building_synthetics_plants
+				is_building_type = building_steel_mills
+				is_building_type = building_motor_industry
+				is_building_type = building_war_machine_industry
+				is_building_type = building_electrics_industry
+				is_building_type = building_munition_plants
+				is_building_type = building_power_plant
+			}
+		}
+		add = this.level
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:division_of_labor_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.3 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = division_of_labor_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_food_industry
+				is_building_type = building_textile_mills
+				is_building_type = building_furniture_manufacturies
+				is_building_type = building_glassworks
+				is_building_type = building_tooling_workshops
+				is_building_type = building_paper_mills
+				is_building_type = building_chemical_plants
+				is_building_type = building_synthetics_plants
+				is_building_type = building_steel_mills
+				is_building_type = building_motor_industry
+				is_building_type = building_war_machine_industry
+				is_building_type = building_electrics_industry
+				is_building_type = building_munition_plants
+				is_building_type = building_power_plant
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:division_of_labor_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.4 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = division_of_labor_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:division_of_labor_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.5 = {
+    type = country_event
+    placement = root
+    title = invention_events.5.t
+    desc = invention_events.5.d
+    flavor = invention_events.5.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = division_of_labor_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:division_of_labor_discoveries < 20
+        }
+		add_modifier = {
+            name = division_of_labor_modifier
+		}
+        if = {
+            limit = {
+                global_var:division_of_labor_discoveries < 1
+            }
+            add_modifier = {
+                name = division_of_labor_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.6
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:division_of_labor_discoveries < 1 }
+                    global_var:division_of_labor_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = division_of_labor_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:division_of_labor_discoveries < 5 }
+            }
+            add_modifier = {
+                name = division_of_labor_prestige
+            }
+        }
+        change_global_variable = {
+            name = division_of_labor_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.6 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = division_of_labor_first_occurred
+    }
+}invention_events.7 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = tulls_seed_drill_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:tulls_seed_drill_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.8 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = tulls_seed_drill_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+			}
+		}
+		add = this.level
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:tulls_seed_drill_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.9 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = tulls_seed_drill_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:tulls_seed_drill_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.10 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = tulls_seed_drill_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:tulls_seed_drill_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.11 = {
+    type = country_event
+    placement = root
+    title = invention_events.11.t
+    desc = invention_events.11.d
+    flavor = invention_events.11.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = tulls_seed_drill_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:tulls_seed_drill_discoveries < 20
+        }
+		add_modifier = {
+            name = tulls_seed_drill_modifier
+		}
+        if = {
+            limit = {
+                global_var:tulls_seed_drill_discoveries < 1
+            }
+            add_modifier = {
+                name = tulls_seed_drill_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.12
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:tulls_seed_drill_discoveries < 1 }
+                    global_var:tulls_seed_drill_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = tulls_seed_drill_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:tulls_seed_drill_discoveries < 5 }
+            }
+            add_modifier = {
+                name = tulls_seed_drill_prestige
+            }
+        }
+        change_global_variable = {
+            name = tulls_seed_drill_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.12 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = tulls_seed_drill_first_occurred
+    }
+}invention_events.13 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = advanced_ore_roasting_processes_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:advanced_ore_roasting_processes_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.14 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = advanced_ore_roasting_processes_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_coal_mine
+				is_building_type = building_iron_mine
+				is_building_type = building_lead_mine
+				is_building_type = building_sulfur_mine
+				is_building_type = building_gold_mine
+			}
+		}
+		add = this.level
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:advanced_ore_roasting_processes_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.15 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = advanced_ore_roasting_processes_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_coal_mine
+				is_building_type = building_iron_mine
+				is_building_type = building_lead_mine
+				is_building_type = building_sulfur_mine
+				is_building_type = building_gold_mine
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:advanced_ore_roasting_processes_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.16 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = advanced_ore_roasting_processes_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:advanced_ore_roasting_processes_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.17 = {
+    type = country_event
+    placement = root
+    title = invention_events.17.t
+    desc = invention_events.17.d
+    flavor = invention_events.17.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = advanced_ore_roasting_processes_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:advanced_ore_roasting_processes_discoveries < 20
+        }
+		add_modifier = {
+            name = advanced_ore_roasting_processes_modifier
+		}
+        if = {
+            limit = {
+                global_var:advanced_ore_roasting_processes_discoveries < 1
+            }
+            add_modifier = {
+                name = advanced_ore_roasting_processes_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.18
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:advanced_ore_roasting_processes_discoveries < 1 }
+                    global_var:advanced_ore_roasting_processes_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = advanced_ore_roasting_processes_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:advanced_ore_roasting_processes_discoveries < 5 }
+            }
+            add_modifier = {
+                name = advanced_ore_roasting_processes_prestige
+            }
+        }
+        change_global_variable = {
+            name = advanced_ore_roasting_processes_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.18 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = advanced_ore_roasting_processes_first_occurred
+    }
+}invention_events.19 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = improved_bale_press_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:improved_bale_press_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.20 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = improved_bale_press_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_cotton_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+			}
+		}
+		add = this.level
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:improved_bale_press_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.21 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = improved_bale_press_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_cotton_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:improved_bale_press_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.22 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = improved_bale_press_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:improved_bale_press_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.23 = {
+    type = country_event
+    placement = root
+    title = invention_events.23.t
+    desc = invention_events.23.d
+    flavor = invention_events.23.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = improved_bale_press_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:improved_bale_press_discoveries < 20
+        }
+		add_modifier = {
+            name = improved_bale_press_modifier
+		}
+        if = {
+            limit = {
+                global_var:improved_bale_press_discoveries < 1
+            }
+            add_modifier = {
+                name = improved_bale_press_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.24
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:improved_bale_press_discoveries < 1 }
+                    global_var:improved_bale_press_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = improved_bale_press_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:improved_bale_press_discoveries < 5 }
+            }
+            add_modifier = {
+                name = improved_bale_press_prestige
+            }
+        }
+        change_global_variable = {
+            name = improved_bale_press_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.24 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = improved_bale_press_first_occurred
+    }
+}invention_events.25 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = integral_distillery_process_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:integral_distillery_process_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.26 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = integral_distillery_process_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	limit = {
+		NOT = {
+			is_production_method_active = {
+				building_type = building_food_industry
+				production_method = pm_disabled_distillery
+			}
+		}
+	}
+	every_scope_building = {
+		add = {
+			value = this.level
+		}
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:integral_distillery_process_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.27 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = integral_distillery_process_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	limit = {
+		NOT = {
+			is_production_method_active = {
+				building_type = building_food_industry
+				production_method = pm_disabled_distillery
+			}
+		}
+	}
+	every_scope_building = {
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # empty
+                multiply = {
+                    value = global_var:integral_distillery_process_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.28 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = integral_distillery_process_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:integral_distillery_process_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.29 = {
+    type = country_event
+    placement = root
+    title = invention_events.29.t
+    desc = invention_events.29.d
+    flavor = invention_events.29.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = integral_distillery_process_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:integral_distillery_process_discoveries < 20
+        }
+		add_modifier = {
+            name = integral_distillery_process_modifier
+		}
+        if = {
+            limit = {
+                global_var:integral_distillery_process_discoveries < 1
+            }
+            add_modifier = {
+                name = integral_distillery_process_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.30
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:integral_distillery_process_discoveries < 1 }
+                    global_var:integral_distillery_process_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = integral_distillery_process_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:integral_distillery_process_discoveries < 5 }
+            }
+            add_modifier = {
+                name = integral_distillery_process_prestige
+            }
+        }
+        change_global_variable = {
+            name = integral_distillery_process_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.30 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = integral_distillery_process_first_occurred
+    }
+}invention_events.31 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = automatic_boiler_valves_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:automatic_boiler_valves_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.32 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = automatic_boiler_valves_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:automatic_boiler_valves_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.33 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = automatic_boiler_valves_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:automatic_boiler_valves_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.34 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = automatic_boiler_valves_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:automatic_boiler_valves_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.35 = {
+    type = country_event
+    placement = root
+    title = invention_events.35.t
+    desc = invention_events.35.d
+    flavor = invention_events.35.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = automatic_boiler_valves_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:automatic_boiler_valves_discoveries < 20
+        }
+		add_modifier = {
+            name = automatic_boiler_valves_modifier
+		}
+        if = {
+            limit = {
+                global_var:automatic_boiler_valves_discoveries < 1
+            }
+            add_modifier = {
+                name = automatic_boiler_valves_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.36
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:automatic_boiler_valves_discoveries < 1 }
+                    global_var:automatic_boiler_valves_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = automatic_boiler_valves_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:automatic_boiler_valves_discoveries < 5 }
+            }
+            add_modifier = {
+                name = automatic_boiler_valves_prestige
+            }
+        }
+        change_global_variable = {
+            name = automatic_boiler_valves_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.36 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = automatic_boiler_valves_first_occurred
+    }
+}invention_events.37 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = physiocratic_economics_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:physiocratic_economics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.38 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = physiocratic_economics_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_livestock_ranch
+				is_building_type = building_coffee_plantation
+				is_building_type = building_cotton_plantation
+				is_building_type = building_dye_plantation
+				is_building_type = building_opium_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+				is_building_type = building_banana_plantation
+				is_building_type = building_silk_plantation
+			}
+		}
+		add = {
+			value = this.level
+		}
+	}
+}
+
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_chemical_plants
+				is_building_type = building_synthetics_plants
+				is_building_type = building_steel_mills
+				is_building_type = building_motor_industry
+				is_building_type = building_war_machine_industry
+				is_building_type = building_munition_plants
+			}
+		}
+		subtract = {
+			value = this.level
+		}
+	}
+}
+
+min = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:physiocratic_economics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.39 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = physiocratic_economics_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_livestock_ranch
+				is_building_type = building_coffee_plantation
+				is_building_type = building_cotton_plantation
+				is_building_type = building_dye_plantation
+				is_building_type = building_opium_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+				is_building_type = building_banana_plantation
+				is_building_type = building_silk_plantation
+			}
+		}
+		add = {
+			value = this.level
+			multiply = 3
+		}
+	}
+}
+
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_chemical_plants
+				is_building_type = building_synthetics_plants
+				is_building_type = building_steel_mills
+				is_building_type = building_motor_industry
+				is_building_type = building_war_machine_industry
+				is_building_type = building_munition_plants
+			}
+		}
+		subtract = {
+			value = this.level
+		}
+	}
+}
+
+min = 10
+                }
+                # TODO
+                multiply = {
+                    value = global_var:physiocratic_economics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.40 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = physiocratic_economics_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:physiocratic_economics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.41 = {
+    type = country_event
+    placement = root
+    title = invention_events.41.t
+    desc = invention_events.41.d
+    flavor = invention_events.41.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = physiocratic_economics_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:physiocratic_economics_discoveries < 20
+        }
+		add_modifier = {
+            name = physiocratic_economics_modifier
+		}
+        if = {
+            limit = {
+                global_var:physiocratic_economics_discoveries < 1
+            }
+            add_modifier = {
+                name = physiocratic_economics_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.42
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:physiocratic_economics_discoveries < 1 }
+                    global_var:physiocratic_economics_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = physiocratic_economics_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:physiocratic_economics_discoveries < 5 }
+            }
+            add_modifier = {
+                name = physiocratic_economics_prestige
+            }
+        }
+        change_global_variable = {
+            name = physiocratic_economics_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.42 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = physiocratic_economics_first_occurred
+    }
+}invention_events.43 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = societal_status_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                multiply = {
+	value = 1
+	if = {
+		limit = {
+			has_technology_researched = romanticism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_technology_researched = realism
+		}
+		add = 1
+	}
+}
+
+ceiling = yes
+                multiply = {
+                    value = global_var:societal_status_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.44 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = societal_status_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_barracks
+				is_building_type = building_naval_base
+			}
+		}
+		add = this.level
+	}
+}
+
+                }
+                multiply = {
+	value = 1
+	if = {
+		limit = {
+			has_technology_researched = romanticism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_technology_researched = realism
+		}
+		add = 1
+	}
+}
+
+ceiling = yes
+                multiply = {
+                    value = global_var:societal_status_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.45 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = societal_status_progress
+            add = { 
+                value = { 
+                    add = 10
+                }
+                multiply = {
+	value = 1
+	if = {
+		limit = {
+			has_technology_researched = romanticism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_technology_researched = realism
+		}
+		add = 1
+	}
+}
+
+ceiling = yes
+                multiply = {
+                    value = global_var:societal_status_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.46 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = societal_status_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                multiply = {
+	value = 1
+	if = {
+		limit = {
+			has_technology_researched = romanticism
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_technology_researched = realism
+		}
+		add = 1
+	}
+}
+
+ceiling = yes
+                multiply = {
+                    value = global_var:societal_status_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.47 = {
+    type = country_event
+    placement = root
+    title = invention_events.47.t
+    desc = invention_events.47.d
+    flavor = invention_events.47.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = societal_status_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:societal_status_discoveries < 20
+        }
+		add_modifier = {
+            name = societal_status_modifier
+		}
+        if = {
+            limit = {
+                global_var:societal_status_discoveries < 1
+            }
+            add_modifier = {
+                name = societal_status_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.48
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:societal_status_discoveries < 1 }
+                    global_var:societal_status_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = societal_status_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:societal_status_discoveries < 5 }
+            }
+            add_modifier = {
+                name = societal_status_prestige
+            }
+        }
+        change_global_variable = {
+            name = societal_status_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.48 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = societal_status_first_occurred
+    }
+}invention_events.49 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = alphabetic_flag_signaling_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:alphabetic_flag_signaling_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.50 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = alphabetic_flag_signaling_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_naval_base
+				is_building_type = building_fishing_wharf
+				is_building_type = building_whaling_station
+				is_building_type = building_port
+			}
+		}
+		add = this.level
+	}
+	every_scope_state = {
+		every_scope_building = {
+			limit = {
+				is_building_type = building_naval_base
+				is_building_type = building_port
+			}
+			add = {
+				value = this.level
+				multiply = this.level
+			}
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:alphabetic_flag_signaling_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.51 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = alphabetic_flag_signaling_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_naval_base
+				is_building_type = building_fishing_wharf
+				is_building_type = building_whaling_station
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+add = {
+	value = {
+		every_scope_state = {
+			every_scope_building = {
+				limit = {
+					is_building_type = building_naval_base
+					is_building_type = building_port
+				}
+				add = this.level
+			}
+		}
+	}
+	multiply = {
+		every_scope_state = {
+			every_scope_building = {
+				limit = {
+					is_building_type = building_naval_base
+					is_building_type = building_port
+				}
+				add = this.level
+			}
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:alphabetic_flag_signaling_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.52 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = alphabetic_flag_signaling_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:alphabetic_flag_signaling_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.53 = {
+    type = country_event
+    placement = root
+    title = invention_events.53.t
+    desc = invention_events.53.d
+    flavor = invention_events.53.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = alphabetic_flag_signaling_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:alphabetic_flag_signaling_discoveries < 20
+        }
+		add_modifier = {
+            name = alphabetic_flag_signaling_modifier
+		}
+        if = {
+            limit = {
+                global_var:alphabetic_flag_signaling_discoveries < 1
+            }
+            add_modifier = {
+                name = alphabetic_flag_signaling_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.54
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:alphabetic_flag_signaling_discoveries < 1 }
+                    global_var:alphabetic_flag_signaling_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = alphabetic_flag_signaling_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:alphabetic_flag_signaling_discoveries < 5 }
+            }
+            add_modifier = {
+                name = alphabetic_flag_signaling_prestige
+            }
+        }
+        change_global_variable = {
+            name = alphabetic_flag_signaling_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.54 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = alphabetic_flag_signaling_first_occurred
+    }
+}invention_events.55 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = naval_design_bureaus_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:naval_design_bureaus_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.56 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = naval_design_bureaus_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:naval_design_bureaus_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.57 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = naval_design_bureaus_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:naval_design_bureaus_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.58 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = naval_design_bureaus_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:naval_design_bureaus_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.59 = {
+    type = country_event
+    placement = root
+    title = invention_events.59.t
+    desc = invention_events.59.d
+    flavor = invention_events.59.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = naval_design_bureaus_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:naval_design_bureaus_discoveries < 20
+        }
+		add_modifier = {
+            name = naval_design_bureaus_modifier
+		}
+        if = {
+            limit = {
+                global_var:naval_design_bureaus_discoveries < 1
+            }
+            add_modifier = {
+                name = naval_design_bureaus_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.60
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:naval_design_bureaus_discoveries < 1 }
+                    global_var:naval_design_bureaus_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = naval_design_bureaus_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:naval_design_bureaus_discoveries < 5 }
+            }
+            add_modifier = {
+                name = naval_design_bureaus_prestige
+            }
+        }
+        change_global_variable = {
+            name = naval_design_bureaus_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.60 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = naval_design_bureaus_first_occurred
+    }
+}invention_events.61 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = surgical_anesthesia_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:surgical_anesthesia_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.62 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = surgical_anesthesia_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:surgical_anesthesia_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.63 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = surgical_anesthesia_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:surgical_anesthesia_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.64 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = surgical_anesthesia_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:surgical_anesthesia_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.65 = {
+    type = country_event
+    placement = root
+    title = invention_events.65.t
+    desc = invention_events.65.d
+    flavor = invention_events.65.f
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = surgical_anesthesia_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:surgical_anesthesia_discoveries < 20
+        }
+		add_modifier = {
+            name = surgical_anesthesia_modifier
+		}
+        if = {
+            limit = {
+                global_var:surgical_anesthesia_discoveries < 1
+            }
+            add_modifier = {
+                name = surgical_anesthesia_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.66
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:surgical_anesthesia_discoveries < 1 }
+                    global_var:surgical_anesthesia_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = surgical_anesthesia_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:surgical_anesthesia_discoveries < 5 }
+            }
+            add_modifier = {
+                name = surgical_anesthesia_prestige
+            }
+        }
+        change_global_variable = {
+            name = surgical_anesthesia_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.66 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = surgical_anesthesia_first_occurred
+    }
+}invention_events.67 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = permanent_fire_watch_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:permanent_fire_watch_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.68 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = permanent_fire_watch_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = {
+			value = this.level
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:permanent_fire_watch_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.69 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = permanent_fire_watch_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+			multiply = 2
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:permanent_fire_watch_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.70 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = permanent_fire_watch_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:permanent_fire_watch_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.71 = {
+    type = country_event
+    placement = root
+    title = invention_events.71.t
+    desc = invention_events.71.d
+    flavor = invention_events.71.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = permanent_fire_watch_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:permanent_fire_watch_discoveries < 20
+        }
+		add_modifier = {
+            name = permanent_fire_watch_modifier
+		}
+        if = {
+            limit = {
+                global_var:permanent_fire_watch_discoveries < 1
+            }
+            add_modifier = {
+                name = permanent_fire_watch_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.72
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:permanent_fire_watch_discoveries < 1 }
+                    global_var:permanent_fire_watch_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = permanent_fire_watch_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:permanent_fire_watch_discoveries < 5 }
+            }
+            add_modifier = {
+                name = permanent_fire_watch_prestige
+            }
+        }
+        change_global_variable = {
+            name = permanent_fire_watch_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.72 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = permanent_fire_watch_first_occurred
+    }
+}invention_events.73 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = idealogical_thought_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:idealogical_thought_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.74 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = idealogical_thought_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:idealogical_thought_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.75 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = idealogical_thought_progress
+            add = { 
+                value = { 
+                    add = 10
+                }
+                # TODO
+                multiply = {
+                    value = global_var:idealogical_thought_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.76 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = idealogical_thought_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:idealogical_thought_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.77 = {
+    type = country_event
+    placement = root
+    title = invention_events.77.t
+    desc = invention_events.77.d
+    flavor = invention_events.77.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = idealogical_thought_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:idealogical_thought_discoveries < 20
+        }
+		add_modifier = {
+            name = idealogical_thought_modifier
+		}
+        if = {
+            limit = {
+                global_var:idealogical_thought_discoveries < 1
+            }
+            add_modifier = {
+                name = idealogical_thought_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.78
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:idealogical_thought_discoveries < 1 }
+                    global_var:idealogical_thought_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = idealogical_thought_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:idealogical_thought_discoveries < 5 }
+            }
+            add_modifier = {
+                name = idealogical_thought_prestige
+            }
+        }
+        change_global_variable = {
+            name = idealogical_thought_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.78 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = idealogical_thought_first_occurred
+    }
+}invention_events.79 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = zoning_ordinances_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:zoning_ordinances_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.80 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = zoning_ordinances_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = {
+			value = this.level
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:zoning_ordinances_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.81 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = zoning_ordinances_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+			multiply = 2
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:zoning_ordinances_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.82 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = zoning_ordinances_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:zoning_ordinances_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.83 = {
+    type = country_event
+    placement = root
+    title = invention_events.83.t
+    desc = invention_events.83.d
+    flavor = invention_events.83.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = zoning_ordinances_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:zoning_ordinances_discoveries < 20
+        }
+		add_modifier = {
+            name = zoning_ordinances_modifier
+		}
+        if = {
+            limit = {
+                global_var:zoning_ordinances_discoveries < 1
+            }
+            add_modifier = {
+                name = zoning_ordinances_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.84
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:zoning_ordinances_discoveries < 1 }
+                    global_var:zoning_ordinances_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = zoning_ordinances_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:zoning_ordinances_discoveries < 5 }
+            }
+            add_modifier = {
+                name = zoning_ordinances_prestige
+            }
+        }
+        change_global_variable = {
+            name = zoning_ordinances_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.84 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = zoning_ordinances_first_occurred
+    }
+}invention_events.85 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = patents_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:patents_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.86 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = patents_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_government_administration
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:patents_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.87 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = patents_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_government_administration
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+			multiply = 2
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:patents_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.88 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = patents_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:patents_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.89 = {
+    type = country_event
+    placement = root
+    title = invention_events.89.t
+    desc = invention_events.89.d
+    flavor = invention_events.89.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = patents_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:patents_discoveries < 20
+        }
+		add_modifier = {
+            name = patents_modifier
+		}
+        if = {
+            limit = {
+                global_var:patents_discoveries < 1
+            }
+            add_modifier = {
+                name = patents_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.90
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:patents_discoveries < 1 }
+                    global_var:patents_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = patents_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:patents_discoveries < 5 }
+            }
+            add_modifier = {
+                name = patents_prestige
+            }
+        }
+        change_global_variable = {
+            name = patents_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.90 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = patents_first_occurred
+    }
+}invention_events.91 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = land_grant_universities_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:land_grant_universities_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.92 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = land_grant_universities_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_university
+		}
+		add = this.level
+	}
+}
+
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_government_administration
+		}
+		add = this.level
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:land_grant_universities_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.93 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = land_grant_universities_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_university
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+			is_building_type = building_government_administration
+		}
+		add = {
+			value = this.level
+			multiply = this.level
+		}
+	}
+}
+
+                }
+                # TODO
+                multiply = {
+                    value = global_var:land_grant_universities_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.94 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = land_grant_universities_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:land_grant_universities_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.95 = {
+    type = country_event
+    placement = root
+    title = invention_events.95.t
+    desc = invention_events.95.d
+    flavor = invention_events.95.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = land_grant_universities_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:land_grant_universities_discoveries < 20
+        }
+		add_modifier = {
+            name = land_grant_universities_modifier
+		}
+        if = {
+            limit = {
+                global_var:land_grant_universities_discoveries < 1
+            }
+            add_modifier = {
+                name = land_grant_universities_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.96
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:land_grant_universities_discoveries < 1 }
+                    global_var:land_grant_universities_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = land_grant_universities_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:land_grant_universities_discoveries < 5 }
+            }
+            add_modifier = {
+                name = land_grant_universities_prestige
+            }
+        }
+        change_global_variable = {
+            name = land_grant_universities_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.96 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = land_grant_universities_first_occurred
+    }
+}invention_events.97 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = constitutionalism_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:constitutionalism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.98 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = constitutionalism_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:constitutionalism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.99 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = constitutionalism_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:constitutionalism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.100 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = constitutionalism_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:constitutionalism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.101 = {
+    type = country_event
+    placement = root
+    title = invention_events.101.t
+    desc = invention_events.101.d
+    flavor = invention_events.101.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = constitutionalism_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:constitutionalism_discoveries < 20
+        }
+		add_modifier = {
+            name = constitutionalism_modifier
+		}
+        if = {
+            limit = {
+                global_var:constitutionalism_discoveries < 1
+            }
+            add_modifier = {
+                name = constitutionalism_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.102
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:constitutionalism_discoveries < 1 }
+                    global_var:constitutionalism_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = constitutionalism_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:constitutionalism_discoveries < 5 }
+            }
+            add_modifier = {
+                name = constitutionalism_prestige
+            }
+        }
+        change_global_variable = {
+            name = constitutionalism_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.102 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = constitutionalism_first_occurred
+    }
+}invention_events.103 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = joint_stock_company_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:joint_stock_company_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.104 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = joint_stock_company_progress
+            add = { 
+                value = { 
+                    add = 1
+every_trade_route = {
+    limit = {
+        OR = {
+            importer.owner = ROOT
+            exporter.owner = ROOT
+        }
+    }
+    # TODO: add something about trade route level here
+    add = 1
+}
+every_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.5
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 10
+    }
+    add = 3
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:joint_stock_company_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.105 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = joint_stock_company_progress
+            add = { 
+                value = { 
+                    add = 10
+every_trade_route = {
+    limit = {
+        OR = {
+            importer.owner = ROOT
+            exporter.owner = ROOT
+        }
+    }
+    # TODO: add something about trade route level here
+    add = 3
+}
+every_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.5
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 10
+    }
+    add = 10
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:joint_stock_company_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.106 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = joint_stock_company_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:joint_stock_company_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.107 = {
+    type = country_event
+    placement = root
+    title = invention_events.107.t
+    desc = invention_events.107.d
+    flavor = invention_events.107.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = joint_stock_company_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:joint_stock_company_discoveries < 20
+        }
+		add_modifier = {
+            name = joint_stock_company_modifier
+		}
+        if = {
+            limit = {
+                global_var:joint_stock_company_discoveries < 1
+            }
+            add_modifier = {
+                name = joint_stock_company_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.108
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:joint_stock_company_discoveries < 1 }
+                    global_var:joint_stock_company_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = joint_stock_company_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:joint_stock_company_discoveries < 5 }
+            }
+            add_modifier = {
+                name = joint_stock_company_prestige
+            }
+        }
+        change_global_variable = {
+            name = joint_stock_company_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.108 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = joint_stock_company_first_occurred
+    }
+}invention_events.109 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = anatomy_and_physiology_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 1
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 3
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 5
+        }
+    }
+    multiply = 2
+}
+                multiply = {
+                    value = global_var:anatomy_and_physiology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.110 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = anatomy_and_physiology_progress
+            add = { 
+                value = { 
+                    add = 1
+
+                }
+                IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 1
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 3
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 5
+        }
+    }
+    multiply = 2
+}
+                multiply = {
+                    value = global_var:anatomy_and_physiology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.111 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = anatomy_and_physiology_progress
+            add = { 
+                value = { 
+                    add = 10
+
+                }
+                IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 1
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 3
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 5
+        }
+    }
+    multiply = 2
+}
+                multiply = {
+                    value = global_var:anatomy_and_physiology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.112 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = anatomy_and_physiology_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 1
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 3
+        }
+    }
+    multiply = 2
+}
+IF = {
+    limit = {
+        institution_investment_level = {
+            institution = institution_health_system
+            value >= 5
+        }
+    }
+    multiply = 2
+}
+                multiply = {
+                    value = global_var:anatomy_and_physiology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.113 = {
+    type = country_event
+    placement = root
+    title = invention_events.113.t
+    desc = invention_events.113.d
+    flavor = invention_events.113.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = anatomy_and_physiology_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:anatomy_and_physiology_discoveries < 20
+        }
+		add_modifier = {
+            name = anatomy_and_physiology_modifier
+		}
+        if = {
+            limit = {
+                global_var:anatomy_and_physiology_discoveries < 1
+            }
+            add_modifier = {
+                name = anatomy_and_physiology_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.114
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:anatomy_and_physiology_discoveries < 1 }
+                    global_var:anatomy_and_physiology_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = anatomy_and_physiology_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:anatomy_and_physiology_discoveries < 5 }
+            }
+            add_modifier = {
+                name = anatomy_and_physiology_prestige
+            }
+        }
+        change_global_variable = {
+            name = anatomy_and_physiology_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.114 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = anatomy_and_physiology_first_occurred
+    }
+}invention_events.115 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = silver_standard_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:silver_standard_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.116 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = silver_standard_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:silver_standard_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.117 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = silver_standard_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:silver_standard_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.118 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = silver_standard_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:silver_standard_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.119 = {
+    type = country_event
+    placement = root
+    title = invention_events.119.t
+    desc = invention_events.119.d
+    flavor = invention_events.119.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = silver_standard_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:silver_standard_discoveries < 20
+        }
+		add_modifier = {
+            name = silver_standard_modifier
+		}
+        if = {
+            limit = {
+                global_var:silver_standard_discoveries < 1
+            }
+            add_modifier = {
+                name = silver_standard_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.120
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:silver_standard_discoveries < 1 }
+                    global_var:silver_standard_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = silver_standard_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:silver_standard_discoveries < 5 }
+            }
+            add_modifier = {
+                name = silver_standard_prestige
+            }
+        }
+        change_global_variable = {
+            name = silver_standard_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.120 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = silver_standard_first_occurred
+    }
+}invention_events.121 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = eugenics_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:eugenics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.122 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = eugenics_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:eugenics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.123 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = eugenics_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:eugenics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.124 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = eugenics_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:eugenics_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.125 = {
+    type = country_event
+    placement = root
+    title = invention_events.125.t
+    desc = invention_events.125.d
+    flavor = invention_events.125.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = eugenics_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:eugenics_discoveries < 20
+        }
+		add_modifier = {
+            name = eugenics_modifier
+		}
+        if = {
+            limit = {
+                global_var:eugenics_discoveries < 1
+            }
+            add_modifier = {
+                name = eugenics_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.126
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:eugenics_discoveries < 1 }
+                    global_var:eugenics_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = eugenics_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:eugenics_discoveries < 5 }
+            }
+            add_modifier = {
+                name = eugenics_prestige
+            }
+        }
+        change_global_variable = {
+            name = eugenics_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.126 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = eugenics_first_occurred
+    }
+}invention_events.127 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = existentialism_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:existentialism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.128 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = existentialism_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:existentialism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.129 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = existentialism_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:existentialism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.130 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = existentialism_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:existentialism_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.131 = {
+    type = country_event
+    placement = root
+    title = invention_events.131.t
+    desc = invention_events.131.d
+    flavor = invention_events.131.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = existentialism_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:existentialism_discoveries < 20
+        }
+		add_modifier = {
+            name = existentialism_modifier
+		}
+        if = {
+            limit = {
+                global_var:existentialism_discoveries < 1
+            }
+            add_modifier = {
+                name = existentialism_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.132
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:existentialism_discoveries < 1 }
+                    global_var:existentialism_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = existentialism_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:existentialism_discoveries < 5 }
+            }
+            add_modifier = {
+                name = existentialism_prestige
+            }
+        }
+        change_global_variable = {
+            name = existentialism_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.132 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = existentialism_first_occurred
+    }
+}invention_events.133 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = mass_advertising_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:mass_advertising_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.134 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = mass_advertising_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:mass_advertising_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.135 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = mass_advertising_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:mass_advertising_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.136 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = mass_advertising_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:mass_advertising_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.137 = {
+    type = country_event
+    placement = root
+    title = invention_events.137.t
+    desc = invention_events.137.d
+    flavor = invention_events.137.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = mass_advertising_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:mass_advertising_discoveries < 20
+        }
+		add_modifier = {
+            name = mass_advertising_modifier
+		}
+        if = {
+            limit = {
+                global_var:mass_advertising_discoveries < 1
+            }
+            add_modifier = {
+                name = mass_advertising_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.138
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:mass_advertising_discoveries < 1 }
+                    global_var:mass_advertising_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = mass_advertising_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:mass_advertising_discoveries < 5 }
+            }
+            add_modifier = {
+                name = mass_advertising_prestige
+            }
+        }
+        change_global_variable = {
+            name = mass_advertising_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.138 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = mass_advertising_first_occurred
+    }
+}invention_events.139 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = womens_sufferage_movement_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # TODO
+                multiply = {
+                    value = global_var:womens_sufferage_movement_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.140 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = womens_sufferage_movement_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:womens_sufferage_movement_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.141 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = womens_sufferage_movement_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # TODO
+                multiply = {
+                    value = global_var:womens_sufferage_movement_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.142 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = womens_sufferage_movement_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # TODO
+                multiply = {
+                    value = global_var:womens_sufferage_movement_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.143 = {
+    type = country_event
+    placement = root
+    title = invention_events.143.t
+    desc = invention_events.143.d
+    flavor = invention_events.143.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = womens_sufferage_movement_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:womens_sufferage_movement_discoveries < 20
+        }
+		add_modifier = {
+            name = womens_sufferage_movement_modifier
+		}
+        if = {
+            limit = {
+                global_var:womens_sufferage_movement_discoveries < 1
+            }
+            add_modifier = {
+                name = womens_sufferage_movement_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.144
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:womens_sufferage_movement_discoveries < 1 }
+                    global_var:womens_sufferage_movement_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = womens_sufferage_movement_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:womens_sufferage_movement_discoveries < 5 }
+            }
+            add_modifier = {
+                name = womens_sufferage_movement_prestige
+            }
+        }
+        change_global_variable = {
+            name = womens_sufferage_movement_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.144 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = womens_sufferage_movement_first_occurred
+    }
+}invention_events.145 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = regulated_stock_trade_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:regulated_stock_trade_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.146 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = regulated_stock_trade_progress
+            add = { 
+                value = { 
+                    add = 1
+every_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.5
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 6
+    }
+    add = this.level
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:regulated_stock_trade_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.147 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = regulated_stock_trade_progress
+            add = { 
+                value = { 
+                    add = 10
+every_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.5
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 6
+    }
+    add = {
+        value = this.level
+        multiply = 3
+    }
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:regulated_stock_trade_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.148 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = regulated_stock_trade_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:regulated_stock_trade_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.149 = {
+    type = country_event
+    placement = root
+    title = invention_events.149.t
+    desc = invention_events.149.d
+    flavor = invention_events.149.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = regulated_stock_trade_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:regulated_stock_trade_discoveries < 20
+        }
+		add_modifier = {
+            name = regulated_stock_trade_modifier
+		}
+        if = {
+            limit = {
+                global_var:regulated_stock_trade_discoveries < 1
+            }
+            add_modifier = {
+                name = regulated_stock_trade_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.150
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:regulated_stock_trade_discoveries < 1 }
+                    global_var:regulated_stock_trade_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = regulated_stock_trade_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:regulated_stock_trade_discoveries < 5 }
+            }
+            add_modifier = {
+                name = regulated_stock_trade_prestige
+            }
+        }
+        change_global_variable = {
+            name = regulated_stock_trade_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.150 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = regulated_stock_trade_first_occurred
+    }
+}invention_events.151 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = standardized_double_entry_bookkeeping_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:standardized_double_entry_bookkeeping_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.152 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = standardized_double_entry_bookkeeping_progress
+            add = { 
+                value = { 
+                    add = 1
+any_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.95
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 2
+    }
+    add = {
+        value = this.level
+        multiply = 2
+    }
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:standardized_double_entry_bookkeeping_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.153 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = standardized_double_entry_bookkeeping_progress
+            add = { 
+                value = { 
+                    add = 10
+any_scope_building = {
+    limit = {
+        cash_reserves_ratio > 0.95
+        weekly_profit > 0
+        occupancy >= 0.75
+        level >= 2
+    }
+    add = {
+        value = this.level
+        multiply = 5
+    }
+}
+                }
+                # empty
+                multiply = {
+                    value = global_var:standardized_double_entry_bookkeeping_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.154 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = standardized_double_entry_bookkeeping_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:standardized_double_entry_bookkeeping_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.155 = {
+    type = country_event
+    placement = root
+    title = invention_events.155.t
+    desc = invention_events.155.d
+    flavor = invention_events.155.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = standardized_double_entry_bookkeeping_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:standardized_double_entry_bookkeeping_discoveries < 20
+        }
+		add_modifier = {
+            name = standardized_double_entry_bookkeeping_modifier
+		}
+        if = {
+            limit = {
+                global_var:standardized_double_entry_bookkeeping_discoveries < 1
+            }
+            add_modifier = {
+                name = standardized_double_entry_bookkeeping_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.156
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:standardized_double_entry_bookkeeping_discoveries < 1 }
+                    global_var:standardized_double_entry_bookkeeping_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = standardized_double_entry_bookkeeping_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:standardized_double_entry_bookkeeping_discoveries < 5 }
+            }
+            add_modifier = {
+                name = standardized_double_entry_bookkeeping_prestige
+            }
+        }
+        change_global_variable = {
+            name = standardized_double_entry_bookkeeping_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.156 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = standardized_double_entry_bookkeeping_first_occurred
+    }
+}invention_events.157 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = bankers_clearing_house_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                IF = {
+	limit = {
+		treasury < 0
+	}
+	multiply = 10
+}
+
+                multiply = {
+                    value = global_var:bankers_clearing_house_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.158 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = bankers_clearing_house_progress
+            add = { 
+                value = { 
+                    add = 10
+                }
+                IF = {
+	limit = {
+		treasury < 0
+	}
+	multiply = 10
+}
+
+                multiply = {
+                    value = global_var:bankers_clearing_house_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.159 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = bankers_clearing_house_progress
+            add = { 
+                value = { 
+                    add = 100
+                }
+                IF = {
+	limit = {
+		treasury < 0
+	}
+	multiply = 10
+}
+
+                multiply = {
+                    value = global_var:bankers_clearing_house_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.160 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = bankers_clearing_house_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                IF = {
+	limit = {
+		treasury < 0
+	}
+	multiply = 10
+}
+
+                multiply = {
+                    value = global_var:bankers_clearing_house_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.161 = {
+    type = country_event
+    placement = root
+    title = invention_events.161.t
+    desc = invention_events.161.d
+    flavor = invention_events.161.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = bankers_clearing_house_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:bankers_clearing_house_discoveries < 20
+        }
+		add_modifier = {
+            name = bankers_clearing_house_modifier
+		}
+        if = {
+            limit = {
+                global_var:bankers_clearing_house_discoveries < 1
+            }
+            add_modifier = {
+                name = bankers_clearing_house_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.162
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:bankers_clearing_house_discoveries < 1 }
+                    global_var:bankers_clearing_house_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = bankers_clearing_house_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:bankers_clearing_house_discoveries < 5 }
+            }
+            add_modifier = {
+                name = bankers_clearing_house_prestige
+            }
+        }
+        change_global_variable = {
+            name = bankers_clearing_house_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.162 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = bankers_clearing_house_first_occurred
+    }
+}invention_events.163 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = phenomenology_progress
+            add = { 
+                value = { 
+                    add = 1
+                }
+                # empty
+                multiply = {
+                    value = global_var:phenomenology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.164 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = phenomenology_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # empty
+                multiply = {
+                    value = global_var:phenomenology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.165 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = phenomenology_progress
+            add = { 
+                value = { 
+                    # TODO
+                }
+                # empty
+                multiply = {
+                    value = global_var:phenomenology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.166 = {
+    type = country_event
+
+    hidden = yes
+
+    immediate = {
+        change_variable = {
+            name = phenomenology_progress
+            add = { 
+                value = { 
+                    add = 500
+                }
+                # empty
+                multiply = {
+                    value = global_var:phenomenology_discoveries
+                    divide = 10
+                    add = 1
+                }
+
+                ceiling = yes
+            }
+        }
+    }
+}
+
+invention_events.167 = {
+    type = country_event
+    placement = root
+    title = invention_events.167.t
+    desc = invention_events.167.d
+    flavor = invention_events.167.f
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+	}
+
+    option = {
+        name = event_completion_default
+		add_modifier = {
+            name = phenomenology_modifier
+		}
+        ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+        name = event_completion_sharing
+        default_option = yes
+        ai_chance = {
+			base = 100
+		}
+        trigger = {
+            global_var:phenomenology_discoveries < 20
+        }
+		add_modifier = {
+            name = phenomenology_modifier
+		}
+        if = {
+            limit = {
+                global_var:phenomenology_discoveries < 1
+            }
+            add_modifier = {
+                name = phenomenology_first_prestige
+            }
+            save_scope_as = originator
+            every_country = {
+                trigger_event = invention_events.168
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    NOT = { global_var:phenomenology_discoveries < 1 }
+                    global_var:phenomenology_discoveries < 5
+                }
+            }
+            add_modifier = {
+                name = phenomenology_early_prestige
+            }
+        }
+        if = {
+            limit = {
+                NOT = { global_var:phenomenology_discoveries < 5 }
+            }
+            add_modifier = {
+                name = phenomenology_prestige
+            }
+        }
+        change_global_variable = {
+            name = phenomenology_discoveries
+            add = 1
+		}
+    }
+}
+
+invention_events.168 = {
+    type = country_event
+
+    hidden = yes
+    immediate = {
+        post_notification = phenomenology_first_occurred
+    }
+}

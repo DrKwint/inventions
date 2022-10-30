@@ -1,0 +1,196 @@
+﻿division_of_labor_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+tulls_seed_drill_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+advanced_ore_roasting_processes_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+improved_bale_press_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+integral_distillery_process_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+automatic_boiler_valves_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+physiocratic_economics_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+societal_status_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+alphabetic_flag_signaling_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+naval_design_bureaus_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+surgical_anesthesia_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+permanent_fire_watch_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+idealogical_thought_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+zoning_ordinances_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+patents_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+land_grant_universities_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+constitutionalism_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+joint_stock_company_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+anatomy_and_physiology_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+silver_standard_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+eugenics_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+existentialism_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+mass_advertising_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+womens_sufferage_movement_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+regulated_stock_trade_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+standardized_double_entry_bookkeeping_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+bankers_clearing_house_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+
+phenomenology_first_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/technology.dds"
+	notification_type = feed
+	months = 1
+}
+

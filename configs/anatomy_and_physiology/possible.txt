@@ -1,0 +1,10 @@
+AND = {
+    institution_investment_level = {
+        institution = institution_health_system
+        value >= 1
+    }
+    any_scope_state = {
+        # percent >= 0.01
+		has_building = building_university
+    }
+}

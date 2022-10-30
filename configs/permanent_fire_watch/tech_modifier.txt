@@ -1,0 +1,5 @@
+building_group_bg_manufacturing_mortality_mult = -0.002
+building_group_bg_government_mortality_mult = -0.002
+building_group_bg_service_mortality_mult = -0.002
+building_group_bg_infrastructure_mortality_mult = -0.002
+

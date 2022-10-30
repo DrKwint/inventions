@@ -1,0 +1,1 @@
+building_output_liquor_mult = 0.04

@@ -1,0 +1,1 @@
+country_weekly_innovation_max_add = 10

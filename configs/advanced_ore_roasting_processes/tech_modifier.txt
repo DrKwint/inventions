@@ -1,0 +1,5 @@
+building_coal_mine_throughput_mult = 0.02
+building_iron_mine_throughput_mult = 0.02
+building_lead_mine_throughput_mult = 0.02
+building_sulfur_mine_throughput_mult = 0.02
+building_gold_mine_throughput_mult = 0.02
