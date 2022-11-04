@@ -1,6 +1,6 @@
 ﻿l_english:
- event_completion_default:0 "Onwards, into the future!
- event_completion_sharing:0 "And we should share this innovation! For glory!
+ event_completion_default:0 "Onwards, into the future!"
+ event_completion_sharing:0 "And we should share this innovation! For glory!"
 
  division_of_labor_je:0 "Invention - Division of Labor"
  division_of_labor_je_goal:0 "Invent a better way to do manufacturing"
@@ -63,11 +63,11 @@
  notification_improved_bale_press_first_occurred_desc:0 "Improved Bale Press has been invented in [SCOPE.sC('originator').GetName ]. Others can now only hope to come second."
 
  integral_distillery_process_je:0 "Invention - Integral Distillery Process"
- integral_distillery_process_je_goal:0 "TODO"
- integral_distillery_process_je_reason:0 "TODO"
+ integral_distillery_process_je_goal:0 "Make the very intensive process of fractional distillation more efficient."
+ integral_distillery_process_je_reason:0 "To speed up fractionation, we may be able to combine some separate processes from across the plant into one big machine."
  invention_events.29.t:0 "Invention - Integral Distillery Process"
- invention_events.29.d:0 "TODO"
- invention_events.29.f:0 "TODO"
+ invention_events.29.d:0 "We have found a way to fractionate more efficiently!"
+ invention_events.29.f:0 "By placing processes with the correct thermal properties on opposite sides of a membrane, we can more efficiently accomplish fractional distillation!"
  invention_events.29.fe:0 "As an early pioneer of this innovation, we might choose to share it with the world for fame and glory!"
  invention_events.29.fl:0 "Though we are late to this innovation, we envision it playing a key role in our advancement on the world stage."
  integral_distillery_process_modifier:0 "Invention - Integral Distillery Process"

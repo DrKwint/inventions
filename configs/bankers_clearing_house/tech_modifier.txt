@@ -1,2 +1,2 @@
 # not the *biggest* fan of this
-country_loan_interest_rate_mult = -0.05
+country_loan_interest_rate_mult = -0.025

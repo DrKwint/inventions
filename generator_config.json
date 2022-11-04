@@ -75,7 +75,7 @@
         "${script_name}": "integral_distillery_process",
         "${display_proper_name}": "Integral Distillery Process",
         "${type}": "industry",
-        "${tech}": "distillation",
+        "${tech}": "fractional_distillation",
         "${goal_points}": 1000,
         "${event_probs}": [
             869,
@@ -84,10 +84,10 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Make the very intensive process of fractional distillation more efficient.",
+        "${journal_reason}": "To speed up fractionation, we may be able to combine some separate processes from across the plant into one big machine.",
+        "${completion_description}": "We have found a way to fractionate more efficiently!",
+        "${completion_flavor}": "By placing processes with the correct thermal properties on opposite sides of a membrane, we can more efficiently accomplish fractional distillation!"
     },
     {
         "${script_name}": "automatic_boiler_valves",
@@ -469,7 +469,7 @@
     },
     {
         "${script_name}": "bankers_clearing_house",
-        "${display_proper_name}": "Bankers' Clearing House",
+        "${display_proper_name}": "Bankers Clearing House",
         "${type}": "society",
         "${tech}": "central_banking",
         "${goal_points}": 1000,

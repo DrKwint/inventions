@@ -1,0 +1,1 @@
+Copy-Item .\Inventions -Destination "C:\Users\elean\Documents\Paradox Interactive\Victoria 3\mod" -Recurse -Force

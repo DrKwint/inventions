@@ -1,7 +1,7 @@
 from distutils.command.config import config
 from pathlib import Path
 import re
-import codecs
+import shutil
 
 global_event_idx = 1
 
@@ -169,19 +169,43 @@ for entry in configs:
     localization.append(local)
     notifications.append(notif)
 
-with open('generated/inventionsmod_journal_entries.txt', 'w', encoding='utf-8-sig') as test:
+shutil.rmtree('./Inventions', ignore_errors=True)
+Path('./Inventions/.metadata').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/common/journal_entries').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/common/modifiers').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/common/notification_types').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/events').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/localization/english').mkdir(parents=True, exist_ok=True)
+with open('Inventions/common/journal_entries/inventionsmod_journal_entries.txt', 'w', encoding='utf-8-sig') as test:
     test.writelines(journal_entrys)
-with open('generated/inventionsmod_events.txt', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/events/inventionsmod_events.txt', 'w', encoding='utf-8-sig') as test:
     test.write('namespace = invention_events\n\n')
     for set in events:
         test.writelines(set)
-with open('generated/inventionsmod_modifiers.txt', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/common/modifiers/inventionsmod_modifiers.txt', 'w', encoding='utf-8-sig') as test:
     test.writelines(modifiers)
-with open('generated/inventionsmod_l_english.yml', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/localization/english/inventionsmod_l_english.yml', 'w', encoding='utf-8-sig') as test:
     test.write('l_english:\n')
     test.write(' event_completion_default:0 "Onwards, into the future!"\n')
     test.write(' event_completion_sharing:0 "And we should share this innovation! For glory!"\n')
     test.write('\n')
     test.writelines(localization)
-with open('generated/inventionsmod_notifications.txt', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/common/notification_types/inventionsmod_notifications.txt', 'w', encoding='utf-8-sig') as test:
     test.writelines(notifications)
+
+metadata = {
+  "name" : "Inventions",
+  "id" : "Inventions",
+  "version" : "0.0.1",
+  "supported_game_version" : "1.0.*",
+  "short_description" : "Vicky 2 style inventions",
+  "tags" : [
+    "Expansion"
+  ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : True
+  }
+}
+with open('./inventions/.metadata/metadata.json', 'w') as metadata_file:
+    json.dump(metadata, metadata_file)
