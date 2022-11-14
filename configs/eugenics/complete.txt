@@ -1,1 +1,20 @@
-# TODO
+OR = {
+    ig:ig_landowners = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_armed_forces = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_petty_bourgeoisie = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+}

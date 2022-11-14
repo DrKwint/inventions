@@ -1,1 +1,28 @@
-# TODO
+add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+            OR = {
+                has_active_production_method = pm_atmospheric_engine_pump_building_coal_mine
+                has_active_production_method = pm_condensing_engine_pump_building_coal_mine 
+                has_active_production_method = pm_diesel_pump_building_coal_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_iron_mine
+                has_active_production_method = pm_condensing_engine_pump_building_iron_mine 
+                has_active_production_method = pm_diesel_pump_building_iron_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_lead_mine
+                has_active_production_method = pm_condensing_engine_pump_building_lead_mine 
+                has_active_production_method = pm_diesel_pump_building_lead_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_sulfur_mine
+                has_active_production_method = pm_condensing_engine_pump_building_sulfur_mine 
+                has_active_production_method = pm_diesel_pump_building_sulfur_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_gold_mine
+                has_active_production_method = pm_condensing_engine_pump_building_gold_mine 
+                has_active_production_method = pm_diesel_pump_building_gold_mine 
+            }
+		}
+		add = {
+            value = this.level
+            multiply = this.level
+        }
+	}
+}

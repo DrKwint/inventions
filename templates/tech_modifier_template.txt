@@ -15,5 +15,5 @@ ${script_name}_early_prestige = {
 
 ${script_name}_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }

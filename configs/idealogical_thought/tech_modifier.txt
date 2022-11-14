@@ -1,1 +1,2 @@
-interest_group_pop_attraction_mult = 0.02
+interest_group_pop_attraction_mult = 0.01
+political_movement_radicalism_mult = 0.02

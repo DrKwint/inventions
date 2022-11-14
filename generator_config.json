@@ -102,10 +102,10 @@
             1
         ],
         "${tech_depth}": 3,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Reduce the manual effort required to run an engine.",
+        "${journal_reason}": "Engines are being deployed all over, but still require a great deal of labor to run.",
+        "${completion_description}": "We have engineered a device to automatically run an engine!",
+        "${completion_flavor}": "Rather than having to train a small army of attendants to keep an engine running, we can use its own power to operate the valves."
     },
     {
         "${script_name}": "physiocratic_economics",
@@ -120,10 +120,10 @@
             1
         ],
         "${tech_depth}": 4,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Study the underpinnings of the economy.",
+        "${journal_reason}": "With the rise of manufacturing, questions are being raised about where the true source of wealth lies.",
+        "${completion_description}": "We have decided that farms are the lifeblood of the economy!",
+        "${completion_flavor}": "Just as blood flows about the human body, distributing the nutrition derived from food, so too does the economy circulate to distribute the fruits of the land."
     },
     {
         "${script_name}": "societal_status",
@@ -140,7 +140,7 @@
         "${tech_depth}": 1,
         "${journal_goal}": "Find some way to reward our soldiers for their service.",
         "${journal_reason}": "Find some way to reward our soldiers for their service.",
-        "${completion_description}": "We now credit our soldiers with the esteem the're due.",
+        "${completion_description}": "We now credit our soldiers with the esteem they're due.",
         "${completion_flavor}": "'The officers of the -shire were in general a very creditable, gentlemanlike set, and the best of them were of the present party; but Mr. Wickham was as far beyond them all in person, countenance, air, and walk.' - Jane Austen, in Pride and Prejudice"
     },
     {
@@ -156,9 +156,9 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
+        "${journal_goal}": "Standardize a method of inter-ship communication.",
+        "${journal_reason}": "With the rise of international shipping, communicating between ships is becoming increasingly difficult.",
+        "${completion_description}": "We have devised a system of communication between ships of any port of origin!",
         "${completion_flavor}": "'You are the most beautiful ship in the world.' - USS Independence, to the Amerigo Vespucci"
     },
     {
@@ -192,8 +192,8 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
+        "${journal_goal}": "Find a more humane way to conduct surgical procedures.",
+        "${journal_reason}": "As the science of surgery advances, we must figure out a better method of alleviating pain than alcohol and opium.",
         "${completion_description}": "TODO",
         "${completion_flavor}": "TODO"
     },
@@ -210,10 +210,10 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "'The fire was barely fifteen minutes old. What followed was a series of fatal errors that set the fire free and doomed the city to a fiery death.' ― Jim Murphy, The Great Fire"
+        "${journal_goal}": "Establish a profession of firefighters",
+        "${journal_reason}": "As people from the countryside pack into cities, the number of tragedies is rising.",
+        "${completion_description}": "We have established firefighting as a profession!",
+        "${completion_flavor}": "'The fire was barely fifteen minutes old. What followed was a series of fatal errors that set the fire free and doomed the city to a fiery death.' - Jim Murphy, The Great Fire"
     },
     {
         "${script_name}": "idealogical_thought",
@@ -246,10 +246,10 @@
             1
         ],
         "${tech_depth}": 2,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Design a system of planning city growth.",
+        "${journal_reason}": "As people pour into cities, haphazard building placement is getting messy and unsafe. We need more organization.",
+        "${completion_description}": "We have designed a system of city planning!",
+        "${completion_flavor}": "We can enforce the orderly growth of cities by putting laws in place regarding how land may be used."
     },
     {
         "${script_name}": "patents",
@@ -300,10 +300,10 @@
             1
         ],
         "${tech_depth}": 2,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Hear the people's desire for a constitution",
+        "${journal_reason}": "Whispering in the streets heralds the end of the divine right of kings...",
+        "${completion_description}": "The people has expressed their desire for a constitutional system of checks and balances!",
+        "${completion_flavor}": "From the theories of Montesquieu to the broadsides of Thomas Paine, belief in a constitution is sweeping the nation."
     },
     {
         "${script_name}": "joint_stock_company",
@@ -319,9 +319,9 @@
         ],
         "${tech_depth}": 3,
         "${journal_goal}": "Afford legal rights and protections to bigger commercial ventures than ever before.",
-        "${journal_reason}": "We are finding that ",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_reason}": "As the scale of commerce grows, so too do ambitions. With the blessings of the government can these ambitions might be reached.",
+        "${completion_description}": "We have created a legal fiction to protect large commercial ventures.",
+        "${completion_flavor}": "The addition to the legal system of a new form of limited liability company will empower our nations biggest financial bets."
     },
     {
         "${script_name}": "anatomy_and_physiology",
@@ -465,7 +465,7 @@
         "${journal_goal}": "Make the books of large, complex businesses more readable",
         "${journal_reason}": "In order to comprehend and audit the books of the new commercial behemoths, we need to institute some standards around their accounting",
         "${completion_description}": "We have standardized commercial accounting!",
-        "${completion_flavor}": "A collection of typical methods in double-entry bookkeeping have coalesced into a standard that's being taught to clerks and bureaucrats nationwide."
+        "${completion_flavor}": "A collection of typical methods in double-entry bookkeeping have coalesced into a standard that's being taught to clerks and bureaucrats nationwide. This increased transparency has led to increased trust amongst investors."
     },
     {
         "${script_name}": "bankers_clearing_house",
@@ -480,10 +480,10 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${journal_goal}": "Set up a central location for all major financial deals to pass through.",
+        "${journal_reason}": "Ad-hoc bank transfers and major financial dealings are getting messy and complicated to track.",
+        "${completion_description}": "A central location for tracking major financial deals has been established!",
+        "${completion_flavor}": "We can raise the likelihood that deals will be honored by insisting that every major financial transaction is registered with a central third-party."
     },
     {
         "${script_name}": "phenomenology",

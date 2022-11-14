@@ -1,8 +1,6 @@
 any_scope_building = {
-    limit = {
-        cash_reserves_ratio > 0.5
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 8
-    }
+	cash_reserves_ratio > 0.5
+	weekly_profit > 0
+	occupancy >= 0.75
+	level >= 8
 }

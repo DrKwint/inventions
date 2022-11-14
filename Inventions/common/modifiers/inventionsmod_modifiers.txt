@@ -1,6 +1,7 @@
 ﻿division_of_labor_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	building_group_bg_manufacturing_throughput_mult = 0.02
+building_economy_of_scale_level_cap_add = 2
 }
 
 division_of_labor_first_prestige = {
@@ -15,7 +16,7 @@ division_of_labor_early_prestige = {
 
 division_of_labor_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 tulls_seed_drill_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -38,7 +39,7 @@ tulls_seed_drill_early_prestige = {
 
 tulls_seed_drill_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 advanced_ore_roasting_processes_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -61,7 +62,7 @@ advanced_ore_roasting_processes_early_prestige = {
 
 advanced_ore_roasting_processes_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 improved_bale_press_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -86,11 +87,12 @@ improved_bale_press_early_prestige = {
 
 improved_bale_press_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 integral_distillery_process_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	building_output_liquor_mult = 0.04
+building_group_bg_oil_extraction_throughput_mult = 0.02
 }
 
 integral_distillery_process_first_prestige = {
@@ -105,11 +107,13 @@ integral_distillery_process_early_prestige = {
 
 integral_distillery_process_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 automatic_boiler_valves_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	# TODO
+building_group_bg_mining_throughput_mult = 0.02
+building_group_bg_oil_extraction_throughput_mult = 0.02
 }
 
 automatic_boiler_valves_first_prestige = {
@@ -124,7 +128,7 @@ automatic_boiler_valves_early_prestige = {
 
 automatic_boiler_valves_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 physiocratic_economics_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -145,12 +149,13 @@ physiocratic_economics_early_prestige = {
 
 physiocratic_economics_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 societal_status_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	state_conscription_rate_add = 0.05
+	state_conscription_rate_add = 0.025
 country_army_power_projection_mult = 0.05
+country_navy_power_projection_mult = 0.05
 }
 
 societal_status_first_prestige = {
@@ -165,7 +170,7 @@ societal_status_early_prestige = {
 
 societal_status_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 alphabetic_flag_signaling_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
@@ -187,7 +192,7 @@ alphabetic_flag_signaling_early_prestige = {
 
 alphabetic_flag_signaling_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 naval_design_bureaus_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
@@ -206,11 +211,12 @@ naval_design_bureaus_early_prestige = {
 
 naval_design_bureaus_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 surgical_anesthesia_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	# TODO
+	battle_casualties_mult = -0.04
+state_mortality_mult = -0.01
 }
 
 surgical_anesthesia_first_prestige = {
@@ -225,7 +231,7 @@ surgical_anesthesia_early_prestige = {
 
 surgical_anesthesia_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 permanent_fire_watch_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -249,11 +255,12 @@ permanent_fire_watch_early_prestige = {
 
 permanent_fire_watch_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 idealogical_thought_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	interest_group_pop_attraction_mult = 0.02
+	interest_group_pop_attraction_mult = 0.01
+political_movement_radicalism_mult = 0.02
 
 }
 
@@ -269,11 +276,12 @@ idealogical_thought_early_prestige = {
 
 idealogical_thought_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 zoning_ordinances_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	building_urban_center_throughput_mult = 0.02
+	state_urbanization_mult = 0.025
+building_urban_center_throughput_mult = 0.02
 }
 
 zoning_ordinances_first_prestige = {
@@ -288,7 +296,7 @@ zoning_ordinances_early_prestige = {
 
 zoning_ordinances_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 patents_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -307,7 +315,7 @@ patents_early_prestige = {
 
 patents_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 land_grant_universities_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -327,11 +335,12 @@ land_grant_universities_early_prestige = {
 
 land_grant_universities_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 constitutionalism_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	# TODO
+	country_voting_power_from_literacy_add = 4
+country_voting_power_wealth_threshold_add = -2
 }
 
 constitutionalism_first_prestige = {
@@ -346,11 +355,13 @@ constitutionalism_early_prestige = {
 
 constitutionalism_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 joint_stock_company_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_trade_route_competitiveness_mult = 0.05
+	country_trade_route_competitiveness_mult = 0.025
+country_trade_route_quantity_mult = 0.025
+country_trade_route_cost_mult = -0.025
 
 }
 
@@ -366,7 +377,7 @@ joint_stock_company_early_prestige = {
 
 joint_stock_company_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 anatomy_and_physiology_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -390,11 +401,13 @@ anatomy_and_physiology_early_prestige = {
 
 anatomy_and_physiology_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 silver_standard_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	# TODO
+	country_gold_reserve_limit_mult = 0.05
+country_minting_mult = 0.025
+building_cash_reserves_mult = 0.02
 }
 
 silver_standard_first_prestige = {
@@ -409,12 +422,13 @@ silver_standard_early_prestige = {
 
 silver_standard_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 eugenics_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	# TODO
-# reduces birth rate
+	# reduces birth rate for everyone, but more for non-accepted pops
+state_accepted_birth_rate_mult = 0.02
+state_birth_rate_mult = -0.04
 }
 
 eugenics_first_prestige = {
@@ -429,11 +443,12 @@ eugenics_early_prestige = {
 
 eugenics_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 existentialism_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	# TODO
+	country_war_exhaustion_casualties_mult = -0.025
+country_voting_power_from_literacy_add = 1
 }
 
 existentialism_first_prestige = {
@@ -448,7 +463,7 @@ existentialism_early_prestige = {
 
 existentialism_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 mass_advertising_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -467,11 +482,12 @@ mass_advertising_early_prestige = {
 
 mass_advertising_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 womens_sufferage_movement_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	# TODO
+	interest_group_ig_intelligentsia_pol_str_mult = 0.02
+interest_group_ig_intelligentsia_pop_attraction_mult = 0.02
 }
 
 womens_sufferage_movement_first_prestige = {
@@ -486,7 +502,7 @@ womens_sufferage_movement_early_prestige = {
 
 womens_sufferage_movement_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 regulated_stock_trade_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -506,7 +522,7 @@ regulated_stock_trade_early_prestige = {
 
 regulated_stock_trade_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 standardized_double_entry_bookkeeping_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -526,12 +542,12 @@ standardized_double_entry_bookkeeping_early_prestige = {
 
 standardized_double_entry_bookkeeping_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 bankers_clearing_house_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	# not the *biggest* fan of this
-country_loan_interest_rate_mult = -0.05
+country_loan_interest_rate_mult = -0.025
 }
 
 bankers_clearing_house_first_prestige = {
@@ -546,7 +562,7 @@ bankers_clearing_house_early_prestige = {
 
 bankers_clearing_house_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }
 phenomenology_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -565,5 +581,5 @@ phenomenology_early_prestige = {
 
 phenomenology_prestige = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_add = 0.2
+	country_prestige_add = 0.25
 }

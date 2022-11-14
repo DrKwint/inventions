@@ -1,1 +1,2 @@
-# TODO
+country_war_exhaustion_casualties_mult = -0.025
+country_voting_power_from_literacy_add = 1

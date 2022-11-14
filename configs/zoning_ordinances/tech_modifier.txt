@@ -1,1 +1,2 @@
+state_urbanization_mult = 0.025
 building_urban_center_throughput_mult = 0.02

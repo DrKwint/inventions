@@ -179,7 +179,7 @@ invention_events.5 = {
 			base = 100
 		}
         trigger = {
-            global_var:division_of_labor_discoveries < 20
+            global_var:division_of_labor_discoveries < 40
         }
 		add_modifier = {
             name = division_of_labor_modifier
@@ -390,7 +390,7 @@ invention_events.11 = {
 			base = 100
 		}
         trigger = {
-            global_var:tulls_seed_drill_discoveries < 20
+            global_var:tulls_seed_drill_discoveries < 40
         }
 		add_modifier = {
             name = tulls_seed_drill_modifier
@@ -601,7 +601,7 @@ invention_events.17 = {
 			base = 100
 		}
         trigger = {
-            global_var:advanced_ore_roasting_processes_discoveries < 20
+            global_var:advanced_ore_roasting_processes_discoveries < 40
         }
 		add_modifier = {
             name = advanced_ore_roasting_processes_modifier
@@ -816,7 +816,7 @@ invention_events.23 = {
 			base = 100
 		}
         trigger = {
-            global_var:improved_bale_press_discoveries < 20
+            global_var:improved_bale_press_discoveries < 40
         }
 		add_modifier = {
             name = improved_bale_press_modifier
@@ -905,8 +905,8 @@ invention_events.26 = {
 every_scope_state = {
 	every_scope_building = {
 		limit = {
-			AND = {
-				is_building_type = building_food_industry
+			is_building_type = building_food_industry
+			state = {
 				NOT = {
 					is_production_method_active = {
 						building_type = building_food_industry
@@ -948,8 +948,8 @@ invention_events.27 = {
 every_scope_state = {
 	every_scope_building = {
 		limit = {
-			AND = {
-				is_building_type = building_food_industry
+			is_building_type = building_food_industry
+			state = {
 				NOT = {
 					is_production_method_active = {
 						building_type = building_food_industry
@@ -964,7 +964,6 @@ every_scope_state = {
 		}
 	}
 }
-
                 }
                 # empty
                 multiply = {
@@ -1032,7 +1031,7 @@ invention_events.29 = {
 			base = 100
 		}
         trigger = {
-            global_var:integral_distillery_process_discoveries < 20
+            global_var:integral_distillery_process_discoveries < 40
         }
 		add_modifier = {
             name = integral_distillery_process_modifier
@@ -1094,7 +1093,7 @@ invention_events.30 = {
                 value = { 
                     add = 1
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:automatic_boiler_valves_discoveries
                     divide = 10
@@ -1117,9 +1116,34 @@ invention_events.32 = {
             name = automatic_boiler_valves_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 1
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+            OR = {
+                has_active_production_method = pm_atmospheric_engine_pump_building_coal_mine
+                has_active_production_method = pm_condensing_engine_pump_building_coal_mine 
+                has_active_production_method = pm_diesel_pump_building_coal_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_iron_mine
+                has_active_production_method = pm_condensing_engine_pump_building_iron_mine 
+                has_active_production_method = pm_diesel_pump_building_iron_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_lead_mine
+                has_active_production_method = pm_condensing_engine_pump_building_lead_mine 
+                has_active_production_method = pm_diesel_pump_building_lead_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_sulfur_mine
+                has_active_production_method = pm_condensing_engine_pump_building_sulfur_mine 
+                has_active_production_method = pm_diesel_pump_building_sulfur_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_gold_mine
+                has_active_production_method = pm_condensing_engine_pump_building_gold_mine 
+                has_active_production_method = pm_diesel_pump_building_gold_mine 
+            }
+		}
+		add = this.level
+	}
+}
+
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:automatic_boiler_valves_discoveries
                     divide = 10
@@ -1142,9 +1166,37 @@ invention_events.33 = {
             name = automatic_boiler_valves_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 10
+every_scope_state = {
+	every_scope_building = {
+		limit = {
+            OR = {
+                has_active_production_method = pm_atmospheric_engine_pump_building_coal_mine
+                has_active_production_method = pm_condensing_engine_pump_building_coal_mine 
+                has_active_production_method = pm_diesel_pump_building_coal_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_iron_mine
+                has_active_production_method = pm_condensing_engine_pump_building_iron_mine 
+                has_active_production_method = pm_diesel_pump_building_iron_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_lead_mine
+                has_active_production_method = pm_condensing_engine_pump_building_lead_mine 
+                has_active_production_method = pm_diesel_pump_building_lead_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_sulfur_mine
+                has_active_production_method = pm_condensing_engine_pump_building_sulfur_mine 
+                has_active_production_method = pm_diesel_pump_building_sulfur_mine 
+                has_active_production_method = pm_atmospheric_engine_pump_building_gold_mine
+                has_active_production_method = pm_condensing_engine_pump_building_gold_mine 
+                has_active_production_method = pm_diesel_pump_building_gold_mine 
+            }
+		}
+		add = {
+            value = this.level
+            multiply = this.level
+        }
+	}
+}
+
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:automatic_boiler_valves_discoveries
                     divide = 10
@@ -1169,7 +1221,7 @@ invention_events.34 = {
                 value = { 
                     add = 500
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:automatic_boiler_valves_discoveries
                     divide = 10
@@ -1210,7 +1262,7 @@ invention_events.35 = {
 			base = 100
 		}
         trigger = {
-            global_var:automatic_boiler_valves_discoveries < 20
+            global_var:automatic_boiler_valves_discoveries < 40
         }
 		add_modifier = {
             name = automatic_boiler_valves_modifier
@@ -1481,7 +1533,7 @@ invention_events.41 = {
 			base = 100
 		}
         trigger = {
-            global_var:physiocratic_economics_discoveries < 20
+            global_var:physiocratic_economics_discoveries < 40
         }
 		add_modifier = {
             name = physiocratic_economics_modifier
@@ -1735,7 +1787,7 @@ invention_events.47 = {
 			base = 100
 		}
         trigger = {
-            global_var:societal_status_discoveries < 20
+            global_var:societal_status_discoveries < 40
         }
 		add_modifier = {
             name = societal_status_modifier
@@ -1980,7 +2032,7 @@ invention_events.53 = {
 			base = 100
 		}
         trigger = {
-            global_var:alphabetic_flag_signaling_discoveries < 20
+            global_var:alphabetic_flag_signaling_discoveries < 40
         }
 		add_modifier = {
             name = alphabetic_flag_signaling_modifier
@@ -2158,7 +2210,7 @@ invention_events.59 = {
 			base = 100
 		}
         trigger = {
-            global_var:naval_design_bureaus_discoveries < 20
+            global_var:naval_design_bureaus_discoveries < 40
         }
 		add_modifier = {
             name = naval_design_bureaus_modifier
@@ -2336,7 +2388,7 @@ invention_events.65 = {
 			base = 100
 		}
         trigger = {
-            global_var:surgical_anesthesia_discoveries < 20
+            global_var:surgical_anesthesia_discoveries < 40
         }
 		add_modifier = {
             name = surgical_anesthesia_modifier
@@ -2542,7 +2594,7 @@ invention_events.71 = {
 			base = 100
 		}
         trigger = {
-            global_var:permanent_fire_watch_discoveries < 20
+            global_var:permanent_fire_watch_discoveries < 40
         }
 		add_modifier = {
             name = permanent_fire_watch_modifier
@@ -2720,7 +2772,7 @@ invention_events.77 = {
 			base = 100
 		}
         trigger = {
-            global_var:idealogical_thought_discoveries < 20
+            global_var:idealogical_thought_discoveries < 40
         }
 		add_modifier = {
             name = idealogical_thought_modifier
@@ -2926,7 +2978,7 @@ invention_events.83 = {
 			base = 100
 		}
         trigger = {
-            global_var:zoning_ordinances_discoveries < 20
+            global_var:zoning_ordinances_discoveries < 40
         }
 		add_modifier = {
             name = zoning_ordinances_modifier
@@ -3129,7 +3181,7 @@ invention_events.89 = {
 			base = 100
 		}
         trigger = {
-            global_var:patents_discoveries < 20
+            global_var:patents_discoveries < 40
         }
 		add_modifier = {
             name = patents_modifier
@@ -3349,7 +3401,7 @@ invention_events.95 = {
 			base = 100
 		}
         trigger = {
-            global_var:land_grant_universities_discoveries < 20
+            global_var:land_grant_universities_discoveries < 40
         }
 		add_modifier = {
             name = land_grant_universities_modifier
@@ -3411,7 +3463,10 @@ invention_events.96 = {
                 value = { 
                     add = 1
                 }
-                # TODO
+                if = {
+    limit = { country_has_voting_franchise = yes }
+    multiply = 1.5
+}	
                 multiply = {
                     value = global_var:constitutionalism_discoveries
                     divide = 10
@@ -3434,9 +3489,12 @@ invention_events.98 = {
             name = constitutionalism_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 1
                 }
-                # TODO
+                if = {
+    limit = { country_has_voting_franchise = yes }
+    multiply = 1.5
+}	
                 multiply = {
                     value = global_var:constitutionalism_discoveries
                     divide = 10
@@ -3459,9 +3517,12 @@ invention_events.99 = {
             name = constitutionalism_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 10
                 }
-                # TODO
+                if = {
+    limit = { country_has_voting_franchise = yes }
+    multiply = 1.5
+}	
                 multiply = {
                     value = global_var:constitutionalism_discoveries
                     divide = 10
@@ -3486,7 +3547,10 @@ invention_events.100 = {
                 value = { 
                     add = 500
                 }
-                # TODO
+                if = {
+    limit = { country_has_voting_franchise = yes }
+    multiply = 1.5
+}	
                 multiply = {
                     value = global_var:constitutionalism_discoveries
                     divide = 10
@@ -3527,7 +3591,7 @@ invention_events.101 = {
 			base = 100
 		}
         trigger = {
-            global_var:constitutionalism_discoveries < 20
+            global_var:constitutionalism_discoveries < 40
         }
 		add_modifier = {
             name = constitutionalism_modifier
@@ -3743,7 +3807,7 @@ invention_events.107 = {
 			base = 100
 		}
         trigger = {
-            global_var:joint_stock_company_discoveries < 20
+            global_var:joint_stock_company_discoveries < 40
         }
 		add_modifier = {
             name = joint_stock_company_modifier
@@ -4027,7 +4091,7 @@ invention_events.113 = {
 			base = 100
 		}
         trigger = {
-            global_var:anatomy_and_physiology_discoveries < 20
+            global_var:anatomy_and_physiology_discoveries < 40
         }
 		add_modifier = {
             name = anatomy_and_physiology_modifier
@@ -4205,7 +4269,7 @@ invention_events.119 = {
 			base = 100
 		}
         trigger = {
-            global_var:silver_standard_discoveries < 20
+            global_var:silver_standard_discoveries < 40
         }
 		add_modifier = {
             name = silver_standard_modifier
@@ -4267,7 +4331,7 @@ invention_events.120 = {
                 value = { 
                     add = 1
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:eugenics_discoveries
                     divide = 10
@@ -4290,9 +4354,9 @@ invention_events.122 = {
             name = eugenics_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 1
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:eugenics_discoveries
                     divide = 10
@@ -4315,9 +4379,9 @@ invention_events.123 = {
             name = eugenics_progress
             add = { 
                 value = { 
-                    # TODO
+                    add = 10
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:eugenics_discoveries
                     divide = 10
@@ -4342,7 +4406,7 @@ invention_events.124 = {
                 value = { 
                     add = 500
                 }
-                # TODO
+                # empty
                 multiply = {
                     value = global_var:eugenics_discoveries
                     divide = 10
@@ -4383,7 +4447,7 @@ invention_events.125 = {
 			base = 100
 		}
         trigger = {
-            global_var:eugenics_discoveries < 20
+            global_var:eugenics_discoveries < 40
         }
 		add_modifier = {
             name = eugenics_modifier
@@ -4561,7 +4625,7 @@ invention_events.131 = {
 			base = 100
 		}
         trigger = {
-            global_var:existentialism_discoveries < 20
+            global_var:existentialism_discoveries < 40
         }
 		add_modifier = {
             name = existentialism_modifier
@@ -4739,7 +4803,7 @@ invention_events.137 = {
 			base = 100
 		}
         trigger = {
-            global_var:mass_advertising_discoveries < 20
+            global_var:mass_advertising_discoveries < 40
         }
 		add_modifier = {
             name = mass_advertising_modifier
@@ -4917,7 +4981,7 @@ invention_events.143 = {
 			base = 100
 		}
         trigger = {
-            global_var:womens_sufferage_movement_discoveries < 20
+            global_var:womens_sufferage_movement_discoveries < 40
         }
 		add_modifier = {
             name = womens_sufferage_movement_modifier
@@ -5116,7 +5180,7 @@ invention_events.149 = {
 			base = 100
 		}
         trigger = {
-            global_var:regulated_stock_trade_discoveries < 20
+            global_var:regulated_stock_trade_discoveries < 40
         }
 		add_modifier = {
             name = regulated_stock_trade_modifier
@@ -5324,7 +5388,7 @@ invention_events.155 = {
 			base = 100
 		}
         trigger = {
-            global_var:standardized_double_entry_bookkeeping_discoveries < 20
+            global_var:standardized_double_entry_bookkeeping_discoveries < 40
         }
 		add_modifier = {
             name = standardized_double_entry_bookkeeping_modifier
@@ -5388,9 +5452,9 @@ invention_events.156 = {
                 }
                 IF = {
 	limit = {
-		treasury < 0
+		taking_loans = yes
 	}
-	multiply = 10
+	multiply = 2
 }
 
                 multiply = {
@@ -5419,9 +5483,9 @@ invention_events.158 = {
                 }
                 IF = {
 	limit = {
-		treasury < 0
+		taking_loans = yes
 	}
-	multiply = 10
+	multiply = 2
 }
 
                 multiply = {
@@ -5450,9 +5514,9 @@ invention_events.159 = {
                 }
                 IF = {
 	limit = {
-		treasury < 0
+		taking_loans = yes
 	}
-	multiply = 10
+	multiply = 2
 }
 
                 multiply = {
@@ -5481,9 +5545,9 @@ invention_events.160 = {
                 }
                 IF = {
 	limit = {
-		treasury < 0
+		taking_loans = yes
 	}
-	multiply = 10
+	multiply = 2
 }
 
                 multiply = {
@@ -5526,7 +5590,7 @@ invention_events.161 = {
 			base = 100
 		}
         trigger = {
-            global_var:bankers_clearing_house_discoveries < 20
+            global_var:bankers_clearing_house_discoveries < 40
         }
 		add_modifier = {
             name = bankers_clearing_house_modifier
@@ -5704,7 +5768,7 @@ invention_events.167 = {
 			base = 100
 		}
         trigger = {
-            global_var:phenomenology_discoveries < 20
+            global_var:phenomenology_discoveries < 40
         }
 		add_modifier = {
             name = phenomenology_modifier

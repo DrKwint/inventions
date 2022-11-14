@@ -1,1 +1,2 @@
 building_output_liquor_mult = 0.04
+building_group_bg_oil_extraction_throughput_mult = 0.02

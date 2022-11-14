@@ -1,1 +1,3 @@
-# TODO
+country_gold_reserve_limit_mult = 0.05
+country_minting_mult = 0.025
+building_cash_reserves_mult = 0.02

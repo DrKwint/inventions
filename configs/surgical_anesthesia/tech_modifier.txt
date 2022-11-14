@@ -1,1 +1,2 @@
-# TODO
+battle_casualties_mult = -0.04
+state_mortality_mult = -0.01

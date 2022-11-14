@@ -1,1 +1,2 @@
 building_group_bg_manufacturing_throughput_mult = 0.02
+building_economy_of_scale_level_cap_add = 2

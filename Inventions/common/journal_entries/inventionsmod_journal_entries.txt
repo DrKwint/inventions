@@ -364,7 +364,6 @@ integral_distillery_process_je = {
 		NOT = {
 			has_active_production_method = pm_disabled_distillery
 		}
-		level >= 1
 	}
 }
 
@@ -419,6 +418,7 @@ integral_distillery_process_je = {
 		level >= 3
 	}
 }
+
     }
 
     on_complete = {
@@ -433,7 +433,7 @@ automatic_boiler_valves_je = {
 
     is_shown_when_inactive = {
 		has_technology_researched = atmospheric_engine
-		# TODO
+		# empty
 	}
 
     possible = {
@@ -1241,11 +1241,11 @@ constitutionalism_je = {
 
     is_shown_when_inactive = {
 		has_technology_researched = democracy
-		# TODO
+		# empty
 	}
 
     possible = {
-        # TODO
+        # empty
     }
 
     immediate = {
@@ -1288,7 +1288,7 @@ constitutionalism_je = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        # TODO
+        # empty
     }
 
     on_complete = {
@@ -1308,13 +1308,12 @@ joint_stock_company_je = {
 
     possible = {
         any_scope_building = {
-    limit = {
-        cash_reserves_ratio > 0.5
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 8
-    }
+	cash_reserves_ratio > 0.5
+	weekly_profit > 0
+	occupancy >= 0.75
+	level >= 8
 }
+
     }
 
     immediate = {
@@ -1358,13 +1357,12 @@ joint_stock_company_je = {
 			is_goal_complete = yes
 		}
         any_scope_building = {
-    limit = {
-        cash_reserves_ratio > 0.95
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 12
-    }
+	cash_reserves_ratio > 0.95
+	weekly_profit > 0
+	occupancy >= 0.75
+	level >= 12
 }
+
     }
 
     on_complete = {
@@ -1513,11 +1511,31 @@ eugenics_je = {
 
     is_shown_when_inactive = {
 		has_technology_researched = colonization
-		# TODO
+		# empty
 	}
 
     possible = {
-        # TODO
+        OR = {
+    ig:ig_landowners = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_armed_forces = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_petty_bourgeoisie = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+}
+
     }
 
     immediate = {
@@ -1560,7 +1578,27 @@ eugenics_je = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        # TODO
+        OR = {
+    ig:ig_landowners = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_armed_forces = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+    ig:ig_petty_bourgeoisie = {
+        OR = {
+            is_powerful = yes
+            is_in_government = yes
+        }
+    }
+}
+
     }
 
     on_complete = {
@@ -1766,12 +1804,10 @@ regulated_stock_trade_je = {
 
     possible = {
         any_scope_building = {
-    limit = {
         cash_reserves_ratio > 0.95
         weekly_profit > 0
         occupancy >= 0.75
         level >= 6
-    }
 }
     }
 
@@ -1816,12 +1852,10 @@ regulated_stock_trade_je = {
 			is_goal_complete = yes
 		}
         any_scope_building = {
-    limit = {
         cash_reserves_ratio > 0.95
         weekly_profit > 0
         occupancy >= 0.75
         level >= 8
-    }
 }
     }
 
@@ -1842,13 +1876,12 @@ standardized_double_entry_bookkeeping_je = {
 
     possible = {
         any_scope_building = {
-    limit = {
-        cash_reserves_ratio > 0.95
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 4
-    }
+	cash_reserves_ratio > 0.95
+	weekly_profit > 0
+	occupancy >= 0.75
+	level >= 4
 }
+
     }
 
     immediate = {
@@ -1892,13 +1925,12 @@ standardized_double_entry_bookkeeping_je = {
 			is_goal_complete = yes
 		}
         any_scope_building = {
-    limit = {
-        cash_reserves_ratio > 0.95
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 6
-    }
+	cash_reserves_ratio > 0.95
+	weekly_profit > 0
+	occupancy >= 0.75
+	level >= 6
 }
+
     }
 
     on_complete = {

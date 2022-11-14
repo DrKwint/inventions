@@ -1,1 +1,3 @@
 # TODO
+building_group_bg_mining_throughput_mult = 0.02
+building_group_bg_oil_extraction_throughput_mult = 0.02

@@ -1,1 +1,2 @@
-# TODO
+country_voting_power_from_literacy_add = 4
+country_voting_power_wealth_threshold_add = -2

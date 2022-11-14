@@ -26,7 +26,7 @@ ${key} = {
 			base = 100
 		}
         trigger = {
-            global_var:${script_name}_discoveries < 20
+            global_var:${script_name}_discoveries < 40
         }
 		add_modifier = {
             name = ${script_name}_modifier

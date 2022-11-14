@@ -4,6 +4,5 @@ any_scope_state = {
 		NOT = {
 			has_active_production_method = pm_disabled_distillery
 		}
-		level >= 1
 	}
 }
