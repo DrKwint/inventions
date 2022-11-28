@@ -1,4 +1,3 @@
 building_fishing_wharf_throughput_mult = 0.01
 building_whaling_station_throughput_mult = 0.01
 building_port_throughput_mult = 0.02
-# TODO: add some navy/convoys bonus
