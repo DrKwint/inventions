@@ -3,7 +3,9 @@ from pathlib import Path
 import re
 import shutil
 
+DEBUG = False
 global_event_idx = 1
+
 
 def generate_notification_event(key, content):
     content["${key}"] = key
@@ -18,9 +20,17 @@ def generate_notification_event(key, content):
 
 def generate_completion_event(key, content):
     content["${key}"] = key
-    event_icons = {'industry': "industry", 'military': "military", 'society': "portrait"}
+    event_icons = {
+        'industry': "industry",
+        'military': "military",
+        'society': "portrait"
+    }
     content["${event_icon}"] = event_icons[content["${type}"]]
-    event_pictures = {'industry': "middleeast_engineer_blueprint", "military": "europenorthamerica_before_the_battle", 'society': "europenorthamerica_rich_and_poor"}
+    event_pictures = {
+        'industry': "middleeast_engineer_blueprint",
+        "military": "europenorthamerica_before_the_battle",
+        'society': "europenorthamerica_rich_and_poor"
+    }
     content["${event_picture}"] = event_pictures[content["${type}"]]
     with open('./templates/completion_event_template.txt') as template_file:
         entry = template_file.read()
@@ -40,6 +50,7 @@ def generate_advancement_event(key, content):
     pattern = re.compile("|".join(rep.keys()))
     event = pattern.sub(lambda m: rep[re.escape(m.group(0))], entry)
     return event
+
 
 def generate_notification(content):
     with open('./templates/notification_template.txt') as template_file:
@@ -115,9 +126,8 @@ def generate_journal_entry(config):
         "${notification_event_idx}": notification_event_idx
     }
     events.append(
-        generate_completion_event(
-            f"invention_events.{completion_event_idx}",
-            completion_config))
+        generate_completion_event(f"invention_events.{completion_event_idx}",
+                                  completion_config))
 
     events.append(
         generate_notification_event(
@@ -162,7 +172,11 @@ modifiers = []
 localization = []
 notifications = []
 for entry in configs:
-    journal_entry, event, modifier, local, notif = generate_journal_entry(entry)
+    journal_entry, event, modifier, local, notif = generate_journal_entry(
+        entry)
+    if not DEBUG and ("TODO" in journal_entry or "TODO" in event or "TODO"
+                      in modifier or "TODO" in local or "TODO" in notif):
+        continue
     journal_entrys.append(journal_entry)
     events.append(event)
     modifiers.append(modifier)
@@ -173,39 +187,52 @@ shutil.rmtree('./Inventions', ignore_errors=True)
 Path('./Inventions/.metadata').mkdir(parents=True, exist_ok=True)
 Path('./Inventions/common/journal_entries').mkdir(parents=True, exist_ok=True)
 Path('./Inventions/common/modifiers').mkdir(parents=True, exist_ok=True)
-Path('./Inventions/common/notification_types').mkdir(parents=True, exist_ok=True)
+Path('./Inventions/common/notification_types').mkdir(parents=True,
+                                                     exist_ok=True)
 Path('./Inventions/events').mkdir(parents=True, exist_ok=True)
 Path('./Inventions/localization/english').mkdir(parents=True, exist_ok=True)
-with open('Inventions/common/journal_entries/inventionsmod_journal_entries.txt', 'w', encoding='utf-8-sig') as test:
+with open(
+        'Inventions/common/journal_entries/inventionsmod_journal_entries.txt',
+        'w',
+        encoding='utf-8-sig') as test:
     test.writelines(journal_entrys)
-with open('Inventions/events/inventionsmod_events.txt', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/events/inventionsmod_events.txt',
+          'w',
+          encoding='utf-8-sig') as test:
     test.write('namespace = invention_events\n\n')
     for set in events:
         test.writelines(set)
-with open('Inventions/common/modifiers/inventionsmod_modifiers.txt', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/common/modifiers/inventionsmod_modifiers.txt',
+          'w',
+          encoding='utf-8-sig') as test:
     test.writelines(modifiers)
-with open('Inventions/localization/english/inventionsmod_l_english.yml', 'w', encoding='utf-8-sig') as test:
+with open('Inventions/localization/english/inventionsmod_l_english.yml',
+          'w',
+          encoding='utf-8-sig') as test:
     test.write('l_english:\n')
     test.write(' event_completion_default:0 "Onwards, into the future!"\n')
-    test.write(' event_completion_sharing:0 "And we should share this innovation! For glory!"\n')
+    test.write(
+        ' event_completion_sharing:0 "And we should share this innovation! For glory!"\n'
+    )
     test.write('\n')
     test.writelines(localization)
-with open('Inventions/common/notification_types/inventionsmod_notifications.txt', 'w', encoding='utf-8-sig') as test:
+with open(
+        'Inventions/common/notification_types/inventionsmod_notifications.txt',
+        'w',
+        encoding='utf-8-sig') as test:
     test.writelines(notifications)
 
 metadata = {
-  "name" : "Inventions",
-  "id" : "Inventions",
-  "version" : "0.0.1",
-  "supported_game_version" : "1.0.*",
-  "short_description" : "Vicky 2 style inventions",
-  "tags" : [
-    "Expansion"
-  ],
-  "relationships" : [],
-  "game_custom_data" : {
-    "multiplayer_synchronized" : True
-  }
+    "name": "Inventions",
+    "id": "Inventions",
+    "version": "0.0.1",
+    "supported_game_version": "1.0.*",
+    "short_description": "Vicky 2 style inventions",
+    "tags": ["Expansion"],
+    "relationships": [],
+    "game_custom_data": {
+        "multiplayer_synchronized": True
+    }
 }
 with open('./inventions/.metadata/metadata.json', 'w') as metadata_file:
     json.dump(metadata, metadata_file)

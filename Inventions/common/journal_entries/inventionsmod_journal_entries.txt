@@ -1,25 +1,23 @@
 ﻿division_of_labor_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = manufacturies
 		# Empty
 	}
-
-    possible = {
-        any_scope_state = {
-	OR = {
-		has_industry_building = yes
-		has_heavy_industry_building = yes
+	possible = {
+		any_scope_state = {
+			OR = {
+				has_industry_building = yes
+				has_heavy_industry_building = yes
+			}
+		}
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = division_of_labor_discoveries }
+				NOT = {
+					has_global_variable = division_of_labor_discoveries
+				}
 			}
 			set_global_variable = {
 				name = division_of_labor_discoveries
@@ -31,90 +29,82 @@
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:division_of_labor_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.1
-100 = invention_events.2
-30 = invention_events.3
-1 = invention_events.4
+		random_events = {
+			869 = invention_events.1
+			100 = invention_events.2
+			30 = invention_events.3
+			1 = invention_events.4
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        #any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_food_industry
-			is_building_type = building_textile_mills
-			is_building_type = building_furniture_manufacturies
-			is_building_type = building_glassworks
-			is_building_type = building_tooling_workshops
-			is_building_type = building_paper_mills
-			is_building_type = building_chemical_plants
-			is_building_type = building_synthetics_plants
-			is_building_type = building_steel_mills
-			is_building_type = building_motor_industry
-			is_building_type = building_war_machine_industry
-			is_building_type = building_electrics_industry
-			is_building_type = building_munition_plants
-			is_building_type = building_power_plant
+		#any_scope_state = {
+		any_scope_building = {
+			OR = {
+				is_building_type = building_food_industry
+				is_building_type = building_textile_mills
+				is_building_type = building_furniture_manufacturies
+				is_building_type = building_glassworks
+				is_building_type = building_tooling_workshops
+				is_building_type = building_paper_mills
+				is_building_type = building_chemical_plants
+				is_building_type = building_synthetics_plants
+				is_building_type = building_steel_mills
+				is_building_type = building_motor_industry
+				is_building_type = building_war_machine_industry
+				is_building_type = building_electrics_industry
+				is_building_type = building_munition_plants
+				is_building_type = building_power_plant
+			}
+			level >= 2
 		}
-		level >= 2
+		#}
 	}
-#}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.5 }
-    }
-
-    weight = 1
+	on_complete = {
+		trigger_event = {
+			id = invention_events.5
+		}
+	}
+	weight = 1
 }
 
 tulls_seed_drill_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = enclosure
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_rye_farm
-			is_building_type = building_wheat_farm
-			is_building_type = building_rice_farm
-			is_building_type = building_maize_farm
-			is_building_type = building_millet_farm
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rye_farm
+					is_building_type = building_wheat_farm
+					is_building_type = building_rice_farm
+					is_building_type = building_maize_farm
+					is_building_type = building_millet_farm
+				}
+				level >= 2
+			}
 		}
-		level >= 2
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = tulls_seed_drill_discoveries }
+				NOT = {
+					has_global_variable = tulls_seed_drill_discoveries
+				}
 			}
 			set_global_variable = {
 				name = tulls_seed_drill_discoveries
@@ -126,81 +116,73 @@ tulls_seed_drill_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:tulls_seed_drill_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.7
-100 = invention_events.8
-30 = invention_events.9
-1 = invention_events.10
+		random_events = {
+			869 = invention_events.7
+			100 = invention_events.8
+			30 = invention_events.9
+			1 = invention_events.10
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_rye_farm
-			is_building_type = building_wheat_farm
-			is_building_type = building_rice_farm
-			is_building_type = building_maize_farm
-			is_building_type = building_millet_farm
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rye_farm
+					is_building_type = building_wheat_farm
+					is_building_type = building_rice_farm
+					is_building_type = building_maize_farm
+					is_building_type = building_millet_farm
+				}
+				level >= 2
+			}
 		}
-		level >= 2
 	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.11 }
-    }
-
-    weight = 1
+	on_complete = {
+		trigger_event = {
+			id = invention_events.11
+		}
+	}
+	weight = 1
 }
 
 advanced_ore_roasting_processes_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = shaft_mining
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_coal_mine
-			is_building_type = building_iron_mine
-			is_building_type = building_lead_mine
-			is_building_type = building_sulfur_mine
-			is_building_type = building_gold_mine
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_iron_mine
+					is_building_type = building_lead_mine
+					is_building_type = building_sulfur_mine
+					is_building_type = building_gold_mine
+				}
+				level >= 2
+			}
 		}
-		level >= 2
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = advanced_ore_roasting_processes_discoveries }
+				NOT = {
+					has_global_variable = advanced_ore_roasting_processes_discoveries
+				}
 			}
 			set_global_variable = {
 				name = advanced_ore_roasting_processes_discoveries
@@ -212,83 +194,75 @@ advanced_ore_roasting_processes_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:advanced_ore_roasting_processes_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.13
-100 = invention_events.14
-30 = invention_events.15
-1 = invention_events.16
+		random_events = {
+			869 = invention_events.13
+			100 = invention_events.14
+			30 = invention_events.15
+			1 = invention_events.16
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_coal_mine
-			is_building_type = building_iron_mine
-			is_building_type = building_lead_mine
-			is_building_type = building_sulfur_mine
-			is_building_type = building_gold_mine
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_iron_mine
+					is_building_type = building_lead_mine
+					is_building_type = building_sulfur_mine
+					is_building_type = building_gold_mine
+				}
+				level >= 4
+			}
 		}
-		level >= 4
 	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.17 }
-    }
-
-    weight = 2
+	on_complete = {
+		trigger_event = {
+			id = invention_events.17
+		}
+	}
+	weight = 2
 }
 
 improved_bale_press_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = cotton_gin
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_rye_farm
-			is_building_type = building_wheat_farm
-			is_building_type = building_millet_farm
-			is_building_type = building_cotton_plantation
-			is_building_type = building_tea_plantation
-			is_building_type = building_tobacco_plantation
-			is_building_type = building_sugar_plantation
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rye_farm
+					is_building_type = building_wheat_farm
+					is_building_type = building_millet_farm
+					is_building_type = building_cotton_plantation
+					is_building_type = building_tea_plantation
+					is_building_type = building_tobacco_plantation
+					is_building_type = building_sugar_plantation
+				}
+				level >= 3
+			}
 		}
-		level >= 3
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = improved_bale_press_discoveries }
+				NOT = {
+					has_global_variable = improved_bale_press_discoveries
+				}
 			}
 			set_global_variable = {
 				name = improved_bale_press_discoveries
@@ -300,79 +274,71 @@ improved_bale_press_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:improved_bale_press_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.19
-100 = invention_events.20
-30 = invention_events.21
-1 = invention_events.22
+		random_events = {
+			869 = invention_events.19
+			100 = invention_events.20
+			30 = invention_events.21
+			1 = invention_events.22
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_rye_farm
-			is_building_type = building_wheat_farm
-			is_building_type = building_millet_farm
-			is_building_type = building_cotton_plantation
-			is_building_type = building_tea_plantation
-			is_building_type = building_tobacco_plantation
-			is_building_type = building_sugar_plantation
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rye_farm
+					is_building_type = building_wheat_farm
+					is_building_type = building_millet_farm
+					is_building_type = building_cotton_plantation
+					is_building_type = building_tea_plantation
+					is_building_type = building_tobacco_plantation
+					is_building_type = building_sugar_plantation
+				}
+				level >= 5
+			}
 		}
-		level >= 5
 	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.23 }
-    }
-
-    weight = 1
+	on_complete = {
+		trigger_event = {
+			id = invention_events.23
+		}
+	}
+	weight = 1
 }
 
 integral_distillery_process_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = fractional_distillation
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_food_industry
-		NOT = {
-			has_active_production_method = pm_disabled_distillery
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_food_industry
+				NOT = {
+					has_active_production_method = pm_disabled_distillery
+				}
+			}
 		}
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = integral_distillery_process_discoveries }
+				NOT = {
+					has_global_variable = integral_distillery_process_discoveries
+				}
 			}
 			set_global_variable = {
 				name = integral_distillery_process_discoveries
@@ -384,149 +350,79 @@ integral_distillery_process_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:integral_distillery_process_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.25
-100 = invention_events.26
-30 = invention_events.27
-1 = invention_events.28
+		random_events = {
+			869 = invention_events.25
+			100 = invention_events.26
+			30 = invention_events.27
+			1 = invention_events.28
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_food_industry
-		NOT = {
-			has_active_production_method = pm_disabled_distillery
-		}
-		level >= 3
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.29 }
-    }
-
-    weight = 1
-}
-
-automatic_boiler_valves_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = atmospheric_engine
-		# empty
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = automatic_boiler_valves_discoveries }
-			}
-			set_global_variable = {
-				name = automatic_boiler_valves_discoveries
-				value = 0
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_food_industry
+				NOT = {
+					has_active_production_method = pm_disabled_distillery
+				}
+				level >= 3
 			}
 		}
-		set_variable = {
-			name = automatic_boiler_valves_progress
-			value = 0
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.29
 		}
 	}
-
-	current_value = {
-		value = var:automatic_boiler_valves_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.31
-100 = invention_events.32
-30 = invention_events.33
-1 = invention_events.34
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.35 }
-    }
-
-    weight = 3
+	weight = 1
 }
 
 physiocratic_economics_je = {
-    icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = intensive_agriculture
 		# empty
 	}
-
-    possible = {
-        any_scope_building = {
-	OR = {
-		is_building_type = building_rye_farm
-		is_building_type = building_wheat_farm
-		is_building_type = building_rice_farm
-		is_building_type = building_maize_farm
-		is_building_type = building_millet_farm
-		is_building_type = building_livestock_ranch
-		is_building_type = building_coffee_plantation
-		is_building_type = building_cotton_plantation
-		is_building_type = building_dye_plantation
-		is_building_type = building_opium_plantation
-		is_building_type = building_tea_plantation
-		is_building_type = building_tobacco_plantation
-		is_building_type = building_sugar_plantation
-		is_building_type = building_banana_plantation
-		is_building_type = building_silk_plantation
+	possible = {
+		any_scope_building = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_livestock_ranch
+				is_building_type = building_coffee_plantation
+				is_building_type = building_cotton_plantation
+				is_building_type = building_dye_plantation
+				is_building_type = building_opium_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+				is_building_type = building_banana_plantation
+				is_building_type = building_silk_plantation
+			}
+			this.level >= 3
+			count >= 3
+		}
 	}
-	this.level >= 3
-	count >= 3
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = physiocratic_economics_discoveries }
+				NOT = {
+					has_global_variable = physiocratic_economics_discoveries
+				}
 			}
 			set_global_variable = {
 				name = physiocratic_economics_discoveries
@@ -538,81 +434,73 @@ physiocratic_economics_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:physiocratic_economics_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.37
-100 = invention_events.38
-30 = invention_events.39
-1 = invention_events.40
+		random_events = {
+			869 = invention_events.37
+			100 = invention_events.38
+			30 = invention_events.39
+			1 = invention_events.40
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_building = {
-	OR = {
-		is_building_type = building_rye_farm
-		is_building_type = building_wheat_farm
-		is_building_type = building_rice_farm
-		is_building_type = building_maize_farm
-		is_building_type = building_millet_farm
-		is_building_type = building_livestock_ranch
-		is_building_type = building_coffee_plantation
-		is_building_type = building_cotton_plantation
-		is_building_type = building_dye_plantation
-		is_building_type = building_opium_plantation
-		is_building_type = building_tea_plantation
-		is_building_type = building_tobacco_plantation
-		is_building_type = building_sugar_plantation
-		is_building_type = building_banana_plantation
-		is_building_type = building_silk_plantation
+		any_scope_building = {
+			OR = {
+				is_building_type = building_rye_farm
+				is_building_type = building_wheat_farm
+				is_building_type = building_rice_farm
+				is_building_type = building_maize_farm
+				is_building_type = building_millet_farm
+				is_building_type = building_livestock_ranch
+				is_building_type = building_coffee_plantation
+				is_building_type = building_cotton_plantation
+				is_building_type = building_dye_plantation
+				is_building_type = building_opium_plantation
+				is_building_type = building_tea_plantation
+				is_building_type = building_tobacco_plantation
+				is_building_type = building_sugar_plantation
+				is_building_type = building_banana_plantation
+				is_building_type = building_silk_plantation
+			}
+			this.level >= 4
+			count >= 4
+		}
 	}
-	this.level >= 4
-	count >= 4
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.41 }
-    }
-
-    weight = 4
+	on_complete = {
+		trigger_event = {
+			id = invention_events.41
+		}
+	}
+	weight = 4
 }
 
 societal_status_je = {
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = standing_army
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	has_military_building = yes
-}
-
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		any_scope_state = {
+			has_military_building = yes
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = societal_status_discoveries }
+				NOT = {
+					has_global_variable = societal_status_discoveries
+				}
 			}
 			set_global_variable = {
 				name = societal_status_discoveries
@@ -624,76 +512,68 @@ societal_status_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:societal_status_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.43
-100 = invention_events.44
-30 = invention_events.45
-1 = invention_events.46
+		random_events = {
+			869 = invention_events.43
+			100 = invention_events.44
+			30 = invention_events.45
+			1 = invention_events.46
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-            is_building_type = building_barracks
-            is_building_type = building_naval_base
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_barracks
+					is_building_type = building_naval_base
+				}
+				level >= 2
+			}
 		}
-		level >= 2
 	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.47 }
-    }
-
-    weight = 1
+	on_complete = {
+		trigger_event = {
+			id = invention_events.47
+		}
+	}
+	weight = 1
 }
 
 alphabetic_flag_signaling_je = {
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = navigation
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_naval_base
-			is_building_type = building_fishing_wharf
-			is_building_type = building_whaling_station
-			is_building_type = building_port
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_naval_base
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
+					is_building_type = building_port
+				}
+			}
 		}
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = alphabetic_flag_signaling_discoveries }
+				NOT = {
+					has_global_variable = alphabetic_flag_signaling_discoveries
+				}
 			}
 			set_global_variable = {
 				name = alphabetic_flag_signaling_discoveries
@@ -705,198 +585,66 @@ alphabetic_flag_signaling_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:alphabetic_flag_signaling_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.49
-100 = invention_events.50
-30 = invention_events.51
-1 = invention_events.52
+		random_events = {
+			869 = invention_events.49
+			100 = invention_events.50
+			30 = invention_events.51
+			1 = invention_events.52
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_naval_base
-			is_building_type = building_fishing_wharf
-			is_building_type = building_whaling_station
-			is_building_type = building_port
-		}
-		level >= 2
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.53 }
-    }
-
-    weight = 1
-}
-
-naval_design_bureaus_je = {
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = drydocks
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = naval_design_bureaus_discoveries }
-			}
-			set_global_variable = {
-				name = naval_design_bureaus_discoveries
-				value = 0
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_naval_base
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
+					is_building_type = building_port
+				}
+				level >= 2
 			}
 		}
-		set_variable = {
-			name = naval_design_bureaus_progress
-			value = 0
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.53
 		}
 	}
-
-	current_value = {
-		value = var:naval_design_bureaus_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.55
-100 = invention_events.56
-30 = invention_events.57
-1 = invention_events.58
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.59 }
-    }
-
-    weight = 1
-}
-
-surgical_anesthesia_je = {
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = artillery
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = surgical_anesthesia_discoveries }
-			}
-			set_global_variable = {
-				name = surgical_anesthesia_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = surgical_anesthesia_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:surgical_anesthesia_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.61
-100 = invention_events.62
-30 = invention_events.63
-1 = invention_events.64
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.65 }
-    }
-
-    weight = 1
+	weight = 1
 }
 
 permanent_fire_watch_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = urbanization
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_urban_center
-		level >= 2
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 2
+			}
+		}
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = permanent_fire_watch_discoveries }
+				NOT = {
+					has_global_variable = permanent_fire_watch_discoveries
+				}
 			}
 			set_global_variable = {
 				name = permanent_fire_watch_discoveries
@@ -908,131 +656,61 @@ permanent_fire_watch_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:permanent_fire_watch_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.67
-100 = invention_events.68
-30 = invention_events.69
-1 = invention_events.70
+		random_events = {
+			869 = invention_events.67
+			100 = invention_events.68
+			30 = invention_events.69
+			1 = invention_events.70
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_urban_center
-		level >= 4
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.71 }
-    }
-
-    weight = 1
-}
-
-idealogical_thought_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = rationalism
-		# empty
-	}
-
-    possible = {
-        has_technology_researched = rationalism
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = idealogical_thought_discoveries }
-			}
-			set_global_variable = {
-				name = idealogical_thought_discoveries
-				value = 0
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 4
 			}
 		}
-		set_variable = {
-			name = idealogical_thought_progress
-			value = 0
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.71
 		}
 	}
-
-	current_value = {
-		value = var:idealogical_thought_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.73
-100 = invention_events.74
-30 = invention_events.75
-1 = invention_events.76
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # empty
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.77 }
-    }
-
-    weight = 1
+	weight = 1
 }
 
 zoning_ordinances_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = urban_planning
 		# empty
 	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_urban_center
-		level >= 5
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 5
+			}
+		}
 	}
-}
-
-    }
-
-    immediate = {
-        if = {
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = zoning_ordinances_discoveries }
+				NOT = {
+					has_global_variable = zoning_ordinances_discoveries
+				}
 			}
 			set_global_variable = {
 				name = zoning_ordinances_discoveries
@@ -1044,214 +722,56 @@ zoning_ordinances_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:zoning_ordinances_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.79
-100 = invention_events.80
-30 = invention_events.81
-1 = invention_events.82
+		random_events = {
+			869 = invention_events.79
+			100 = invention_events.80
+			30 = invention_events.81
+			1 = invention_events.82
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_state = {
-	any_scope_building = {
-		is_building_type = building_urban_center
-		level >= 8
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.83 }
-    }
-
-    weight = 2
-}
-
-patents_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = bureaucracy
-		# empty
-	}
-
-    possible = {
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_government_administration
-		}
-		level >= 1
-	}
-}
-
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = patents_discoveries }
-			}
-			set_global_variable = {
-				name = patents_discoveries
-				value = 0
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 8
 			}
 		}
-		set_variable = {
-			name = patents_progress
-			value = 0
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.83
 		}
 	}
-
-	current_value = {
-		value = var:patents_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.85
-100 = invention_events.86
-30 = invention_events.87
-1 = invention_events.88
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        any_scope_state = {
-	any_scope_building = {
-		OR = {
-			is_building_type = building_government_administration
-		}
-		level >= 2
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.89 }
-    }
-
-    weight = 2
-}
-
-land_grant_universities_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = academia
-		# empty
-	}
-
-    possible = {
-        any_scope_state = {
-	percent >= 0.75
-	has_building = building_government_administration
-}
-
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = land_grant_universities_discoveries }
-			}
-			set_global_variable = {
-				name = land_grant_universities_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = land_grant_universities_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:land_grant_universities_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.91
-100 = invention_events.92
-30 = invention_events.93
-1 = invention_events.94
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        any_scope_state = {
-	percent >= 0.75
-	AND = {
-		has_building = building_government_administration
-		has_building = building_university
-	}
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.95 }
-    }
-
-    weight = 2
+	weight = 2
 }
 
 constitutionalism_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = democracy
 		# empty
 	}
-
-    possible = {
-        # empty
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		# empty
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = constitutionalism_discoveries }
+				NOT = {
+					has_global_variable = constitutionalism_discoveries
+				}
 			}
 			set_global_variable = {
 				name = constitutionalism_discoveries
@@ -1263,63 +783,56 @@ constitutionalism_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:constitutionalism_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.97
-100 = invention_events.98
-30 = invention_events.99
-1 = invention_events.100
+		random_events = {
+			869 = invention_events.97
+			100 = invention_events.98
+			30 = invention_events.99
+			1 = invention_events.100
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        # empty
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.101 }
-    }
-
-    weight = 2
+		# empty
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.101
+		}
+	}
+	weight = 2
 }
 
 joint_stock_company_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = international_trade
 		# empty
 	}
-
-    possible = {
-        any_scope_building = {
-	cash_reserves_ratio > 0.5
-	weekly_profit > 0
-	occupancy >= 0.75
-	level >= 8
-}
-
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		any_scope_building = {
+			cash_reserves_ratio > 0.5
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 8
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = joint_stock_company_discoveries }
+				NOT = {
+					has_global_variable = joint_stock_company_discoveries
+				}
 			}
 			set_global_variable = {
 				name = joint_stock_company_discoveries
@@ -1331,73 +844,65 @@ joint_stock_company_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:joint_stock_company_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.103
-100 = invention_events.104
-30 = invention_events.105
-1 = invention_events.106
+		random_events = {
+			869 = invention_events.103
+			100 = invention_events.104
+			30 = invention_events.105
+			1 = invention_events.106
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_building = {
-	cash_reserves_ratio > 0.95
-	weekly_profit > 0
-	occupancy >= 0.75
-	level >= 12
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.107 }
-    }
-
-    weight = 3
+		any_scope_building = {
+			cash_reserves_ratio > 0.95
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 12
+		}
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.107
+		}
+	}
+	weight = 3
 }
 
 anatomy_and_physiology_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = medical_degrees
 		# empty
 	}
-
-    possible = {
-        AND = {
-    institution_investment_level = {
-        institution = institution_health_system
-        value >= 1
-    }
-    any_scope_state = {
-        # percent >= 0.01
-		has_building = building_university
-    }
-}
-
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		AND = {
+			institution_investment_level = {
+				institution = institution_health_system
+				value >= 1
+			}
+			any_scope_state = {
+				# percent >= 0.01
+				has_building = building_university
+			}
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = anatomy_and_physiology_discoveries }
+				NOT = {
+					has_global_variable = anatomy_and_physiology_discoveries
+				}
 			}
 			set_global_variable = {
 				name = anatomy_and_physiology_discoveries
@@ -1409,412 +914,56 @@ anatomy_and_physiology_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:anatomy_and_physiology_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.109
-100 = invention_events.110
-30 = invention_events.111
-1 = invention_events.112
+		random_events = {
+			869 = invention_events.109
+			100 = invention_events.110
+			30 = invention_events.111
+			1 = invention_events.112
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        # EMPTY
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.113 }
-    }
-
-    weight = 3
-}
-
-silver_standard_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = currency_standards
-		# TODO
+		# EMPTY
 	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = silver_standard_discoveries }
-			}
-			set_global_variable = {
-				name = silver_standard_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = silver_standard_progress
-			value = 0
+	on_complete = {
+		trigger_event = {
+			id = invention_events.113
 		}
 	}
-
-	current_value = {
-		value = var:silver_standard_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.115
-100 = invention_events.116
-30 = invention_events.117
-1 = invention_events.118
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.119 }
-    }
-
-    weight = 4
-}
-
-eugenics_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = colonization
-		# empty
-	}
-
-    possible = {
-        OR = {
-    ig:ig_landowners = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-    ig:ig_armed_forces = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-    ig:ig_petty_bourgeoisie = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-}
-
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = eugenics_discoveries }
-			}
-			set_global_variable = {
-				name = eugenics_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = eugenics_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:eugenics_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.121
-100 = invention_events.122
-30 = invention_events.123
-1 = invention_events.124
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        OR = {
-    ig:ig_landowners = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-    ig:ig_armed_forces = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-    ig:ig_petty_bourgeoisie = {
-        OR = {
-            is_powerful = yes
-            is_in_government = yes
-        }
-    }
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.125 }
-    }
-
-    weight = 1
-}
-
-existentialism_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = analytical_philosophy
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = existentialism_discoveries }
-			}
-			set_global_variable = {
-				name = existentialism_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = existentialism_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:existentialism_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.127
-100 = invention_events.128
-30 = invention_events.129
-1 = invention_events.130
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.131 }
-    }
-
-    weight = 1
-}
-
-mass_advertising_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = behaviorism
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = mass_advertising_discoveries }
-			}
-			set_global_variable = {
-				name = mass_advertising_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = mass_advertising_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:mass_advertising_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.133
-100 = invention_events.134
-30 = invention_events.135
-1 = invention_events.136
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.137 }
-    }
-
-    weight = 1
-}
-
-womens_sufferage_movement_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = feminism
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = womens_sufferage_movement_discoveries }
-			}
-			set_global_variable = {
-				name = womens_sufferage_movement_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = womens_sufferage_movement_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:womens_sufferage_movement_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.139
-100 = invention_events.140
-30 = invention_events.141
-1 = invention_events.142
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.143 }
-    }
-
-    weight = 1
+	weight = 3
 }
 
 regulated_stock_trade_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = stock_exchange
 		# empty
 	}
-
-    possible = {
-        any_scope_building = {
-        cash_reserves_ratio > 0.95
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 6
-}
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		any_scope_building = {
+			cash_reserves_ratio > 0.95
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 6
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = regulated_stock_trade_discoveries }
+				NOT = {
+					has_global_variable = regulated_stock_trade_discoveries
+				}
 			}
 			set_global_variable = {
 				name = regulated_stock_trade_discoveries
@@ -1826,68 +975,61 @@ regulated_stock_trade_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:regulated_stock_trade_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.145
-100 = invention_events.146
-30 = invention_events.147
-1 = invention_events.148
+		random_events = {
+			869 = invention_events.145
+			100 = invention_events.146
+			30 = invention_events.147
+			1 = invention_events.148
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_building = {
-        cash_reserves_ratio > 0.95
-        weekly_profit > 0
-        occupancy >= 0.75
-        level >= 8
-}
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.149 }
-    }
-
-    weight = 1
+		any_scope_building = {
+			cash_reserves_ratio > 0.95
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 8
+		}
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.149
+		}
+	}
+	weight = 1
 }
 
 standardized_double_entry_bookkeeping_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = banking
 		# empty
 	}
-
-    possible = {
-        any_scope_building = {
-	cash_reserves_ratio > 0.95
-	weekly_profit > 0
-	occupancy >= 0.75
-	level >= 4
-}
-
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		any_scope_building = {
+			cash_reserves_ratio > 0.95
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 4
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = standardized_double_entry_bookkeeping_discoveries }
+				NOT = {
+					has_global_variable = standardized_double_entry_bookkeeping_discoveries
+				}
 			}
 			set_global_variable = {
 				name = standardized_double_entry_bookkeeping_discoveries
@@ -1899,64 +1041,57 @@ standardized_double_entry_bookkeeping_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:standardized_double_entry_bookkeeping_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.151
-100 = invention_events.152
-30 = invention_events.153
-1 = invention_events.154
+		random_events = {
+			869 = invention_events.151
+			100 = invention_events.152
+			30 = invention_events.153
+			1 = invention_events.154
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        any_scope_building = {
-	cash_reserves_ratio > 0.95
-	weekly_profit > 0
-	occupancy >= 0.75
-	level >= 6
-}
-
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.155 }
-    }
-
-    weight = 1
+		any_scope_building = {
+			cash_reserves_ratio > 0.95
+			weekly_profit > 0
+			occupancy >= 0.75
+			level >= 6
+		}
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.155
+		}
+	}
+	weight = 1
 }
 
 bankers_clearing_house_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	is_shown_when_inactive = {
 		has_technology_researched = central_banking
 		# empty
 	}
-
-    possible = {
-        # empty
-# this game needs a finance system qq
-    }
-
-    immediate = {
-        if = {
+	possible = {
+		# empty
+		# this game needs a finance system qq
+	}
+	immediate = {
+		if = {
 			limit = {
-				NOT = { has_global_variable = bankers_clearing_house_discoveries }
+				NOT = {
+					has_global_variable = bankers_clearing_house_discoveries
+				}
 			}
 			set_global_variable = {
 				name = bankers_clearing_house_discoveries
@@ -1968,100 +1103,32 @@ bankers_clearing_house_je = {
 			value = 0
 		}
 	}
-
 	current_value = {
 		value = var:bankers_clearing_house_progress
 	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
+	goal_add_value = {
+		add = 1000
+	}
+	can_deactivate = yes
 	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.157
-100 = invention_events.158
-30 = invention_events.159
-1 = invention_events.160
+		random_events = {
+			869 = invention_events.157
+			100 = invention_events.158
+			30 = invention_events.159
+			1 = invention_events.160
 		}
 	}
-
-    progressbar = yes
-
-    complete = {
+	progressbar = yes
+	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
 		}
-        # empty
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.161 }
-    }
-
-    weight = 1
+		# empty
+	}
+	on_complete = {
+		trigger_event = {
+			id = invention_events.161
+		}
+	}
+	weight = 1
 }
-
-phenomenology_je = {
-    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-    is_shown_when_inactive = {
-		has_technology_researched = psychoanalysis
-		# TODO
-	}
-
-    possible = {
-        # TODO
-    }
-
-    immediate = {
-        if = {
-			limit = {
-				NOT = { has_global_variable = phenomenology_discoveries }
-			}
-			set_global_variable = {
-				name = phenomenology_discoveries
-				value = 0
-			}
-		}
-		set_variable = {
-			name = phenomenology_progress
-			value = 0
-		}
-	}
-
-	current_value = {
-		value = var:phenomenology_progress
-	}
-
-    goal_add_value = {
-        add = 1000
-    }
-
-    can_deactivate = yes
-	on_weekly_pulse = {
-        random_events = {
-		    869 = invention_events.163
-100 = invention_events.164
-30 = invention_events.165
-1 = invention_events.166
-		}
-	}
-
-    progressbar = yes
-
-    complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        # TODO
-    }
-
-    on_complete = {
-        trigger_event = { id = invention_events.167 }
-    }
-
-    weight = 1
-}
-
