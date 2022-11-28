@@ -194,8 +194,8 @@
         "${tech_depth}": 1,
         "${journal_goal}": "Find a more humane way to conduct surgical procedures.",
         "${journal_reason}": "As the science of surgery advances, we must figure out a better method of alleviating pain than alcohol and opium.",
-        "${completion_description}": "TODO",
-        "${completion_flavor}": "TODO"
+        "${completion_description}": "We have lessened the unbearable agony of going under the knife!",
+        "${completion_flavor}": "We have discovered a method of inducing unconciousness while a surgeon operates. This has significantly reduced the mortality rate of surgery, never mind the pain."
     },
     {
         "${script_name}": "permanent_fire_watch",
@@ -228,9 +228,9 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
+        "${journal_goal}": "See where this new direction in political thought is leading.",
         "${journal_reason}": "TODO",
-        "${completion_description}": "TODO",
+        "${completion_description}": "We have embraced a new form of political thought!",
         "${completion_flavor}": "'Slowly, ideas lead to ideology, lead to policies that lead to actions.' – Nandan Nilekani"
     },
     {
@@ -426,8 +426,8 @@
             1
         ],
         "${tech_depth}": 1,
-        "${journal_goal}": "TODO",
-        "${journal_reason}": "TODO",
+        "${journal_goal}": "Hear the peoples desire to give women the vote.",
+        "${journal_reason}": "From the street to the parlours of the wealthy and powerful, the question of why women should not have the vote is running out of legitimate answers.",
         "${completion_description}": "TODO",
         "${completion_flavor}": "TODO"
     },
